@@ -1,5 +1,4 @@
 import React from 'react';
-// import { content } from './content';
 import Jobs from './Jobs';
 
 const JobsList = ({ content }) => {
