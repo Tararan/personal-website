@@ -47,7 +47,7 @@
     width: 120vw;
     min-height: 100px;
     height: 100%;
-    filter: blur(250px) saturate(2) hue-rotate(0deg);
+    filter: blur(50px) saturate(2) hue-rotate(0deg);
 
     background-position: center center;
     background-size: cover;
@@ -57,7 +57,7 @@
 }
 
 .object__bg:hover {
-    filter: blur(150px) saturate(2.5) hue-rotate(90deg);
+    filter: blur(100px) saturate(2.5) hue-rotate(90deg);
     transition: all 3s;
 }
 

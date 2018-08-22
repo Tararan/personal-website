@@ -17,7 +17,7 @@ export const jobsListContent = [
             second list item, lets say -2
         `,
         // descriptionList2: 'second list item, lets say -2',
-        image: 'https://image.flaticon.com/icons/svg/226/226776.svg'
+        image: 'https://image.flaticon.com/icons/svg/1055/1055646.svg'
     },
     {
         id: 2,
