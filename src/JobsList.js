@@ -7,6 +7,7 @@ const JobsList = ({ content }) => {
             {
                 content.map((user, i) => {
                     return (
+                        <div>
                         <Jobs
                             id={content[i].id}
                             employer={content[i].employer}
@@ -17,6 +18,7 @@ const JobsList = ({ content }) => {
                             descriptionList4={content[i].descriptionList4}
                             image={content[i].image}
                         />
+                        </div>
                     );
                 })
             }

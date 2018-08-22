@@ -4,7 +4,7 @@ import './Nav.css';
 const Nav = ({ listItem1, listItem2, listItem3, listItem4 }) => {
     return (
         <div>
-            <nav className="navbar navbar-dark navbar-expand-lg bg-dark nav fixed-top">
+            <nav className="navbar navbar-dark navbar-expand-lg nav fixed-top">
                 <div className="container">
                     <div className="row">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-menu" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
