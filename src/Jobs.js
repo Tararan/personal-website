@@ -17,17 +17,17 @@ const Jobs = ({ employer, description, descriptionList, descriptionList1, descri
                                 </div>
                                 <ul className="description-list">
                                     {/* <li className="description-list-item"> */}
-                                        {descriptionList}
-                                        {descriptionList1}
+                                    {descriptionList}
+                                    {descriptionList1}
                                     {/* </li> */}
                                     {/* <li className="description-list-item"> */}
-                                        {descriptionList2}
+                                    {descriptionList2}
                                     {/* </li> */}
                                     {/* <li className="description-list-item"> */}
-                                        {descriptionList3}
+                                    {descriptionList3}
                                     {/* </li> */}
                                     {/* <li className="description-list-item"> */}
-                                        {descriptionList4}
+                                    {descriptionList4}
                                     {/* </li> */}
 
                                 </ul>
@@ -42,7 +42,10 @@ const Jobs = ({ employer, description, descriptionList, descriptionList1, descri
                         </div>
                     </div>
                 </div>
-                <div className="object__bg" style={{ backgroundImage: `url(${image})` }}></div>
+                <canvas className="object__bg" id="object__bg" style={{ backgroundImage: `url(${image})` }}></canvas>
+                {/* {canvas.getContext('2d').filter = 'blur(5px) opacity(0.6)'; */}
+                {/* <div className="object__bg" style={{ backgroundImage: `url(${image})` }}></div> */}
+
             </section>
         </div >
     );

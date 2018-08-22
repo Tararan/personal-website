@@ -6,6 +6,10 @@
 
 .object {
    padding: 40px; 
+   backface-visibility: hidden;
+   perspective: 1000;
+   transform: translate3d(0,0,0);
+   transform: translateZ(0);
     background-color: rgba(53, 53, 53, 0.45);
     border-radius: 20px;
     box-shadow: 0px 3px 28px 1px rgba(0,0,0,0.75);
@@ -47,7 +51,7 @@
     width: 120vw;
     min-height: 100px;
     height: 100%;
-    filter: blur(50px) saturate(2) hue-rotate(0deg);
+    filter: blur(150px) saturate(2) hue-rotate(0deg);
 
     background-position: center center;
     background-size: cover;
@@ -57,7 +61,7 @@
 }
 
 .object__bg:hover {
-    filter: blur(100px) saturate(2.5) hue-rotate(90deg);
+    filter: blur(200px) saturate(2.5) hue-rotate(90deg);
     transition: all 3s;
 }
 
