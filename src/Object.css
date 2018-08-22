@@ -4,7 +4,7 @@
         url(I_am_online_with_u.woff) format('woff');
   }
 
-.job-object {
+.object {
    padding: 40px; 
     background-color: rgba(53, 53, 53, 0.45);
     border-radius: 20px;
@@ -13,45 +13,60 @@
     display: flex;
     align-items: center;
     transform: scale(1);
-    transition: all 0.35s ease-in;
+    transition: all 0.15s ease-in;
 
 }
 
-.job-object:hover {
-    box-shadow: 0px 3px 32px 1px rgba(0,0,0,0.8);
+.object:hover {
+    box-shadow: 0px 3px 32px 1px rgba(0,0,0,0.9);
     background-color: rgba(53, 53, 53, 0.55);
     transform: scale(1.01);
-    transition: all 0.35s ease-out;
+    transition: all 0.31s ease-out;
 }
 
-.job-object-container {
+.object-container {
     position: relative; 
     padding: 40px;
+    /* 
+        This is used for improving performance with blur filter.
+        Why does it work, I have no idea...
+     */
+    backface-visibility: hidden;
+    perspective: 1000;
+    transform: translate3d(0,0,0);
+    transform: translateZ(0);
 }
 
-.job-object__bg  {
-    filter: blur(150px) contrast(150%);
+.object__bg  {
     position: absolute;
     z-index: -1;
-    min-height: 100px;
-    height: 100%;
     top: 0;
-    width: 120vw;
-    margin: auto;
     left: -10vw;
     right: 0;
+    margin: auto;
+    width: 120vw;
+    min-height: 100px;
+    height: 100%;
+    filter: blur(250px) saturate(2) hue-rotate(0deg);
 
     background-position: center center;
     background-size: cover;
     background-color: #353535;
+
+    transition: all 1.5s;
 }
+
+.object__bg:hover {
+    filter: blur(150px) saturate(2.5) hue-rotate(90deg);
+    transition: all 3s;
+}
+
 
 .image-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 
 .image {
  width:  200px;   

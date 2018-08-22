@@ -1,17 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
-import { content } from './content';
+import registerServiceWorker from './registerServiceWorker';
 import NavList from './NavList';
-import { navListItems } from './navListItems';
+import { navListContent } from './navListContent';
+
 import JobsList from './JobsList';
+import { jobsListContent } from './jobsListContent';
+
+import EducationList from './EducationList';
+import { educationListContent } from './educationListContent';
 
 ReactDOM.render(
     <div>
-        <NavList navListItems={navListItems} />
-        <JobsList content={content} />
+        <NavList navListContent={navListContent} />
+        <JobsList jobsListContent={jobsListContent} />
+        <EducationList educationListContent={educationListContent} />
     </div>
     , document.getElementById('root'));
 registerServiceWorker();

@@ -1,4 +1,4 @@
-export const navListItems = [
+export const navListContent = [
     {
         listItem1: 'Menu Item 1',
         listItem2: 'Menu Item 2',

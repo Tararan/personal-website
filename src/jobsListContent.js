@@ -1,4 +1,4 @@
-export const content = [
+export const jobsListContent = [
     {
         id: 1,
         employer: 'Lorem Ipsum',
@@ -12,10 +12,8 @@ export const content = [
         Integer hendrerit purus eros, ac suscipit odio congue id. 
         Nam pretium nibh sed lectus suscipit, vel pulvinar lectus malesuada. 
         `,
-        descriptionList1: 'list item',
-        descriptionList2: 'list item-2',
-        descriptionList3: 'list item-3',
-        descriptionList4: 'list item-4',
+        descriptionList1: 'list item of sorts',
+        descriptionList2: 'second list item, lets say 2',
         image: 'https://image.flaticon.com/icons/svg/226/226776.svg'
     },
     {
