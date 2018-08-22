@@ -12,10 +12,12 @@ const JobsList = ({ jobsListContent }) => {
                             id={jobsListContent[i].id}
                             employer={jobsListContent[i].employer}
                             description={jobsListContent[i].description}
-                            descriptionList1={jobsListContent[i].descriptionList1}
-                            descriptionList2={jobsListContent[i].descriptionList2}
-                            descriptionList3={jobsListContent[i].descriptionList3}
-                            descriptionList4={jobsListContent[i].descriptionList4}
+                        
+                            descriptionList={jobsListContent[i].descriptionList}
+                            // descriptionList1={<li>{jobsListContent[i].descriptionList1}</li>}
+                            // descriptionList2={<li>{jobsListContent[i].descriptionList2}</li>}
+                            // descriptionList3={<li>{jobsListContent[i].descriptionList3}</li>}
+                            // descriptionList4={<li>{jobsListContent[i].descriptionList4}</li>}
                             image={jobsListContent[i].image}
                         />
                         </div>

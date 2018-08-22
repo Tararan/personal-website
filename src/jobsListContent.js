@@ -12,8 +12,11 @@ export const jobsListContent = [
         Integer hendrerit purus eros, ac suscipit odio congue id. 
         Nam pretium nibh sed lectus suscipit, vel pulvinar lectus malesuada. 
         `,
-        descriptionList1: 'list item of sorts',
-        descriptionList2: 'second list item, lets say 2',
+        descriptionList: `
+            {'list item of sorts'},
+            second list item, lets say -2
+        `,
+        // descriptionList2: 'second list item, lets say -2',
         image: 'https://image.flaticon.com/icons/svg/226/226776.svg'
     },
     {

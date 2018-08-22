@@ -1,7 +1,7 @@
 import React from 'react';
 import './Object.css';
 
-const Jobs = ({ employer, description, descriptionList1, descriptionList2, descriptionList3, descriptionList4, image }) => {
+const Jobs = ({ employer, description, descriptionList, descriptionList1, descriptionList2, descriptionList3, descriptionList4, image }) => {
     return (
         <div>
             <section className="object-container">
@@ -16,18 +16,19 @@ const Jobs = ({ employer, description, descriptionList1, descriptionList2, descr
                                     {description}
                                 </div>
                                 <ul className="description-list">
-                                    <li className="description-list-item">
+                                    {/* <li className="description-list-item"> */}
+                                        {descriptionList}
                                         {descriptionList1}
-                                    </li>
-                                    <li className="description-list-item">
+                                    {/* </li> */}
+                                    {/* <li className="description-list-item"> */}
                                         {descriptionList2}
-                                    </li>
-                                    <li className="description-list-item">
+                                    {/* </li> */}
+                                    {/* <li className="description-list-item"> */}
                                         {descriptionList3}
-                                    </li>
-                                    <li className="description-list-item">
+                                    {/* </li> */}
+                                    {/* <li className="description-list-item"> */}
                                         {descriptionList4}
-                                    </li>
+                                    {/* </li> */}
 
                                 </ul>
 
