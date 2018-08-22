@@ -3,7 +3,7 @@ import Jobs from './Jobs';
 
 const JobsList = ({ content }) => {
     return (
-        <div>
+        <div className="main">
             {
                 content.map((user, i) => {
                     return (
