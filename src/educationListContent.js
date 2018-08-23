@@ -1,5 +1,5 @@
 export const educationListContent = [
-    {
+   {
         id: 1,
         employer: 'Lorem Ipsum',
         description: `
@@ -12,12 +12,14 @@ export const educationListContent = [
         Integer hendrerit purus eros, ac suscipit odio congue id. 
         Nam pretium nibh sed lectus suscipit, vel pulvinar lectus malesuada. 
         `,
-        descriptionList1: 'list item',
-        descriptionList2: '',
+        descriptionList: [
+            'First' , 
+            'Second' , 
+        ],
    
         image: 'https://image.flaticon.com/icons/svg/201/201571.svg'
     },
-   /*  {
+     {
         id: 2,
         employer: 'Lorem Ipsumus Maximus',
         description: `
@@ -30,8 +32,7 @@ export const educationListContent = [
         Integer hendrerit purus eros, ac suscipit odio congue id. 
         Nam pretium nibh sed lectus suscipit, vel pulvinar lectus malesuada. 
         `,
-        descriptionList1: 'list item',
-        descriptionList2: 'list item-2',
+        descriptionList: [ ],
         image: 'https://image.flaticon.com/icons/svg/201/201555.svg'
     },
     {
@@ -59,8 +60,11 @@ export const educationListContent = [
         Integer hendrerit purus eros, ac suscipit odio congue id. 
         Nam pretium nibh sed lectus suscipit, vel pulvinar lectus malesuada. 
         `,
-        descriptionList1: 'list item',
-        descriptionList2: 'list item-2',
+        descriptionList: [
+            'First' , 
+            'Second' , 
+            'Third'
+        ],
         image: 'https://image.flaticon.com/icons/svg/284/284484.svg'
     },
     {
@@ -76,9 +80,8 @@ export const educationListContent = [
         Integer hendrerit purus eros, ac suscipit odio congue id. 
         Nam pretium nibh sed lectus suscipit, vel pulvinar lectus malesuada. 
         `,
-        descriptionList1: 'list item',
-        descriptionList2: 'list item-2',
-        image: 'https://image.flaticon.com/icons/svg/201/201555.svg'
+        descriptionList: [ ],
+        image: 'https://image.flaticon.com/icons/svg/870/870906.svg'
     },
     {
         id: 3,
@@ -90,7 +93,8 @@ export const educationListContent = [
         Integer hendrerit purus eros, ac suscipit odio congue id. 
         Nam pretium nibh sed lectus suscipit, vel pulvinar lectus malesuada. 
         `,
-        image: 'https://image.flaticon.com/icons/svg/284/284425.svg'
+        descriptionList: [ ],
+        image: 'https://image.flaticon.com/icons/svg/152/152752.svg'
     },
         {
         id: 3,
@@ -105,9 +109,8 @@ export const educationListContent = [
         Integer hendrerit purus eros, ac suscipit odio congue id. 
         Nam pretium nibh sed lectus suscipit, vel pulvinar lectus malesuada. 
         `,
-        descriptionList1: 'list item',
-        descriptionList2: 'list item-2',
-        image: 'https://image.flaticon.com/icons/svg/284/284484.svg'
-    } */
+        descriptionList: [ ],
+        image: 'https://image.flaticon.com/icons/svg/732/732217.svg'
+    }
 
 ]

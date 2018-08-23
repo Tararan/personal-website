@@ -12,12 +12,11 @@ export const jobsListContent = [
         Integer hendrerit purus eros, ac suscipit odio congue id. 
         Nam pretium nibh sed lectus suscipit, vel pulvinar lectus malesuada. 
         `,
-        descriptionList: `
-            {'list item of sorts'},
-            second list item, lets say -2
-        `,
-        // descriptionList2: 'second list item, lets say -2',
-        image: 'https://image.flaticon.com/icons/svg/1055/1055646.svg'
+        descriptionList: [
+            'First' , 
+            'Second' , 
+        ],
+        image: 'https://image.flaticon.com/icons/svg/226/226776.svg'
     },
     {
         id: 2,
@@ -32,8 +31,11 @@ export const jobsListContent = [
         Integer hendrerit purus eros, ac suscipit odio congue id. 
         Nam pretium nibh sed lectus suscipit, vel pulvinar lectus malesuada. 
         `,
-        descriptionList1: 'list item',
-        descriptionList2: 'list item-2',
+        descriptionList: [
+            'First' , 
+            'Second' , 
+            'Third' , 
+        ],
         image: 'https://image.flaticon.com/icons/svg/809/809461.svg'
     },
     
@@ -50,9 +52,9 @@ export const jobsListContent = [
         Integer hendrerit purus eros, ac suscipit odio congue id. 
         Nam pretium nibh sed lectus suscipit, vel pulvinar lectus malesuada. 
         `,
-        descriptionList1: 'list item',
-        descriptionList2: 'list item-2',
+        descriptionList: [],
         image: 'https://image.flaticon.com/icons/svg/226/226773.svg'
     },
+
 
 ]

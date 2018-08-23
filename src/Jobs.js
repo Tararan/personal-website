@@ -1,7 +1,7 @@
 import React from 'react';
 import './Object.css';
 
-const Jobs = ({ employer, description, descriptionList, descriptionList1, descriptionList2, descriptionList3, descriptionList4, image }) => {
+const Jobs = ({ employer, description, descriptionList, image }) => {
     return (
         <div>
             <section className="object-container">
@@ -16,24 +16,9 @@ const Jobs = ({ employer, description, descriptionList, descriptionList1, descri
                                     {description}
                                 </div>
                                 <ul className="description-list">
-                                    {/* <li className="description-list-item"> */}
-                                    {descriptionList}
-                                    {descriptionList1}
-                                    {/* </li> */}
-                                    {/* <li className="description-list-item"> */}
-                                    {descriptionList2}
-                                    {/* </li> */}
-                                    {/* <li className="description-list-item"> */}
-                                    {descriptionList3}
-                                    {/* </li> */}
-                                    {/* <li className="description-list-item"> */}
-                                    {descriptionList4}
-                                    {/* </li> */}
-
+                                    {descriptionList.map(item => <li>{item}</li>)}
                                 </ul>
-
                             </div>
-
                             <div className="image-container">
                                 <div className="col-sm-4">
                                     <img className="image" src={image} alt="logo" />

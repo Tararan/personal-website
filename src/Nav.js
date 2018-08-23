@@ -1,7 +1,7 @@
 import React from 'react';
 import './Nav.css';
 
-const Nav = ({ listItem1, listItem2, listItem3, listItem4 }) => {
+const Nav = ({ listItem }) => {
     return (
         <div>
             <nav className="navbar navbar-dark navbar-expand-lg nav fixed-top">
@@ -12,27 +12,15 @@ const Nav = ({ listItem1, listItem2, listItem3, listItem4 }) => {
                         </button>
                         <div className="collapse navbar-collapse nav__list-container " id="nav-menu">
                             <ul className="navbar-nav nav__list d-flex justify-content-between">
-                                <li className="nav-item">
-                                    <a className="nav-link">
-                                        {listItem1}
-                                    </a>
-                                </li>
-
-                                <li className="nav-item">
-                                    <a className="nav-link">
-                                        {listItem2}
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link">
-                                        {listItem3}
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link">
-                                        {listItem4}
-                                    </a>
-                                </li>
+                                { listItem.map((item) => {
+                                    return (
+                                        <li className="nav-item">
+                                            <a className="nav-link">
+                                                {item}
+                                            </a>
+                                        </li>
+                                    );
+                                }) }
                             </ul>
                         </div>
                     </div>

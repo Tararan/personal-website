@@ -1,25 +1,24 @@
 import React from 'react';
 import Jobs from './Jobs';
 
-const JobsList = ({ jobsListContent }) => {
+const JobsList = ({ jobsListContent, navListContent }) => {
     return (
         <div className="main">
+        <h2 class="object__title">
+        {navListContent[0]}
+        {/* Section 1 */}
+        </h2>
             {
                 jobsListContent.map((user, i) => {
                     return (
                         <div>
-                        <Jobs
-                            id={jobsListContent[i].id}
-                            employer={jobsListContent[i].employer}
-                            description={jobsListContent[i].description}
-                        
-                            // descriptionList={jobsListContent[i].descriptionList}
-                            descriptionList1={<li>{jobsListContent[i].descriptionList1}</li>}
-                            descriptionList2={<li>{jobsListContent[i].descriptionList2}</li>}
-                            descriptionList3={<li>{jobsListContent[i].descriptionList3}</li>}
-                            descriptionList4={<li>{jobsListContent[i].descriptionList4}</li>}
-                            image={jobsListContent[i].image}
-                        />
+                            <Jobs
+                                id={user.id}
+                                employer={user.employer}
+                                description={user.description}
+                                descriptionList={user.descriptionList}
+                                image={user.image}
+                            />
                         </div>
                     );
                 })
