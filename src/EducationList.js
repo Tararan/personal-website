@@ -5,7 +5,7 @@ const EducationList = ({ educationListContent }) => {
     return (
         <div className="main">
         <h2 class="object__title">
-        Section 1
+            Section 2
         </h2>
             {
                 educationListContent.map((user, i) => {

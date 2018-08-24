@@ -5,7 +5,7 @@ const JobsList = ({ jobsListContent }) => {
     return (
         <div className="main">
         <h2 class="object__title">
-        Section 1
+            Section 1
         </h2>
             {
                 jobsListContent.map((user, i) => {
