@@ -27,19 +27,17 @@ const Jobs = ({ employer, description, descriptionList, image }) => {
                         </div>
                     </div>
                 </div>
-        {/*         <canvas className="object__bg" id="object__bg" style={{ backgroundImage: `url(${image})` }}>
-                </canvas> */}
-                <svg className="object-svg" preserveAspectRatio="none" >
-                   <defs>
-                        <filter id="f1" x="0" y="0">
-                              <feGaussianBlur in="SourceGraphic" stdDeviation="40" />
-                         </filter>
-                        </defs>
-                          <image x="0" y="0" width="1000px" height="1000px" xlinkHref={image} filter="url(#f1)"/>
-                          Sorry, your browser does not support inline SVG.  
-                    </svg>
-            </section >
-        </div >
+                <div className="object__bg svgblur" id="object__bg" style={{ backgroundImage: `url(${image})` }}>
+                </div>
+                <svg className="object-svg" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="blur80">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="70" />
+                        </filter>
+                    </defs>
+                </svg>
+            </section>
+        </div>
     );
 }
 

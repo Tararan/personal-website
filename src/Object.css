@@ -5,8 +5,7 @@
   }
 
 .object {
-    position: relative;
-    z-index: 20;
+    opacity: 1;
    padding: 40px; 
     background-color: rgba(53, 53, 53, 0.45);
     border-radius: 20px;
@@ -16,14 +15,6 @@
     align-items: center;
     transform: scale(1);
     transition: all 0.15s ease-in;
-        /* 
-        This is used for improving performance with blur filter.
-        Why does it work, I have no idea...
-     */
-     backface-visibility: hidden;
-     perspective: 1000;
-     transform: translate3d(0,0,0);
-     transform: translateZ(0);
 }
 
 .object:hover {
@@ -35,60 +26,37 @@
 
 .object-container {
     position: relative; 
+    /* overflow-y:hidden; */
     padding: 40px;
-    /* text-align: center; */
-    /* 
-        This is used for improving performance with blur filter.
-        Why does it work, I have no idea...
-     */
-    backface-visibility: hidden;
-    perspective: 1000;
-    transform: translate3d(0,0,0);
-    transform: translateZ(0);
 }
-
 
 .object-svg {
-    /* display: block; */
-    /* margin: auto; */
-    overflow: visible;
-    position: absolute;
-    z-index: -2;
-    top: -50%;
-    width:500px;
-    height: 500px;
-/*     width: 200vw;
-    height: 100%; */
-    /* left: 50%; */
-    /* text-align: center; */
+    display: none;
 }
-
-/* .object-svg-image {
-    width: 600px;
-    height: 600px;
-    position: absolute;
-    top: -50%;
-} */
 
 
 .object__bg  {
     position: absolute;
     z-index: -1;
-    top: 0;
-    left: -10vw;
-    right: 0;
-    margin: auto;
-    width: 120vw;
+    top: -10%;
+    left: -25vw;
+    width: 150vw;
     min-height: 100px;
-    height: 100%;
-    /* filter: blur(150px) saturate(2) hue-rotate(0deg); */
+    height: 450%;
+    /* filter: saturate(6) hue-rotate(0deg); */
 
-    background-position: center center;
+    background-position: center 80%;
     background-size: cover;
     background-color: #353535;
 
     transition: all 1.5s ease-out;
 }
+
+
+.svgblur {
+    filter: url(#blur80);
+  }
+  
 
 .object__bg:hover,
 .object__bg:focus {

@@ -36,7 +36,15 @@ const Education = ({ employer, description, descriptionList1, descriptionList2, 
                         </div>
                     </div>
                 </div>
-                <div className="object__bg" style={{ backgroundImage: `url(${image})` }}></div>
+                <div className="object__bg svgblur" id="object__bg" style={{ backgroundImage: `url(${image})` }}>
+                </div>
+                <svg className="object-svg" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="blur80">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="70" />
+                        </filter>
+                    </defs>
+                </svg>
             </section>
         </div >
     );
