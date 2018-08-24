@@ -1,7 +1,7 @@
 import React from 'react';
 import './Object.css';
 
-const Education = ({ employer, description, descriptionList1, descriptionList2, descriptionList3, descriptionList4, image }) => {
+const Education = ({ employer, description, descriptionList, image }) => {
     return (
         <div>
             <section className="object-container">
@@ -16,29 +16,18 @@ const Education = ({ employer, description, descriptionList1, descriptionList2, 
                                     {description}
                                 </div>
                                 <ul className="description-list">
-                                    <li>
-                                        {descriptionList1}
-                                    </li>
-
-                                    <li>
-                                        {descriptionList2}
-                                    </li>
-
+                                    {descriptionList.map(item => <li>{item}</li>)}
                                 </ul>
-
                             </div>
-                            
                             <div className="image-container">
-                            <div className="col-sm-4">
-                                <img className="image" src={image} alt="logo" />
+                                <div className="col-sm-4">
+                                    <img className="image" src={image} alt="logo" />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="object__bg" style={{ backgroundImage: `url(${image})`, filter: 'blur(180px) saturate(2) hue-rotate(0deg)' }}>
-                </div>
-                <div className="object__bg object__bg--hue-rotate" style={{ backgroundImage: `url(${image})`, filter: 'blur(180px) saturate(3) hue-rotate(180deg)' }}>
+                <div className="object__bg" style={{ backgroundImage: `url(${image})` }}>
                 </div>
             </section>
         </div>

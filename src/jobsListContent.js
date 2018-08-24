@@ -16,7 +16,7 @@ export const jobsListContent = [
             'First' , 
             'Second' , 
         ],
-        image: 'https://image.flaticon.com/icons/svg/226/226776.svg'
+        image: 'https://images.unsplash.com/photo-1531386450450-969f935bd522?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0e6037f0a7cd63b48cc1562e348eb3a&auto=format&fit=crop&w=500&q=10'
     },
     {
         id: 2,
@@ -36,7 +36,7 @@ export const jobsListContent = [
             'Second' , 
             'Third' , 
         ],
-        image: 'https://image.flaticon.com/icons/svg/809/809461.svg'
+        image: 'https://images.unsplash.com/photo-1510797215324-95aa89f43c33?ixlib=rb-0.3.5&s=1993d88b0615e6c9e635fd3bcf3d6bb8&auto=format&fit=crop&w=500&q=0'
     },
     
     {
@@ -53,7 +53,7 @@ export const jobsListContent = [
         Nam pretium nibh sed lectus suscipit, vel pulvinar lectus malesuada. 
         `,
         descriptionList: [],
-        image: 'https://image.flaticon.com/icons/svg/226/226773.svg'
+        image: 'https://images.unsplash.com/photo-1508873881324-c92a3fc536ba?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4dd64b8d9512bfc407a50e74baab0e48&auto=format&fit=crop&w=500&q=1'
     },
 
 

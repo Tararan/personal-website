@@ -15,7 +15,7 @@ import { educationListContent } from './educationListContent';
 ReactDOM.render(
     <div>
         <NavList navListContent={navListContent} />
-        <JobsList jobsListContent={jobsListContent} navListContent={navListContent}  />
+        <JobsList jobsListContent={jobsListContent} />
         <EducationList educationListContent={educationListContent} />
     </div>
     , document.getElementById('root'));

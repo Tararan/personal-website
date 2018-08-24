@@ -1,11 +1,10 @@
 import React from 'react';
 import Jobs from './Jobs';
 
-const JobsList = ({ jobsListContent, navListContent }) => {
+const JobsList = ({ jobsListContent }) => {
     return (
         <div className="main">
         <h2 class="object__title">
-        {/* {navListContent[0]} */}
         Section 1
         </h2>
             {

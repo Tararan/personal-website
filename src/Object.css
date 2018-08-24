@@ -34,39 +34,21 @@
     display: block;
     z-index: -1;
     top: 0;
-    left: -10vw;
-    width: 120vw;
-    /* min-height: 100px; */
-    height: 80%;
+    left: -25vw;
+    width: 150vw;
+    height: 150%;
     background-position: center;
     background-size: cover;
     background-color: #353535;
-    opacity: 1;
-    /* filter: blur(180px) saturate(2) hue-rotate(0deg); */
+    filter: blur(80px) saturate(2) hue-rotate(0deg);
     transition: all 1.5s ease-out;
-    /* transform: translate3d(0,0,0);   */
+    transform: translate3d(0,0,0);  
     will-change: opacity;
 }  
 
-.object__bg--hue-rotate {
-    opacity: 0;
-}
-/* 
-.object__bg:hover {
-    filter: blur(180px) saturate(2) hue-rotate(45deg);
-    transition: all 3s ease-in;
-}
- */
-
 .object-container:hover .object__bg,
 .object-container:focus .object__bg {
-    opacity: 0;
-    transition: all 3s ease-in;
-}
-
-.object-container:hover .object__bg--hue-rotate,
-.object-container:focus .object__bg--hue-rotate {
-    opacity: 1;
+    filter: blur(100px) saturate(2) hue-rotate(45deg);
     transition: all 3s ease-in;
 }
 

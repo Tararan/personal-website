@@ -27,9 +27,7 @@ const Jobs = ({ employer, description, descriptionList, image }) => {
                         </div>
                     </div>
                 </div>
-                <div className="object__bg" style={{ backgroundImage: `url(${image})`, filter: 'blur(180px) saturate(2) hue-rotate(0deg)' }}>
-                </div>
-                <div className="object__bg object__bg--hue-rotate" style={{ backgroundImage: `url(${image})`, filter: 'blur(180px) saturate(3) hue-rotate(180deg)' }}>
+                <div className="object__bg" style={{ backgroundImage: `url(${image})` }}>
                 </div>
             </section>
         </div>
