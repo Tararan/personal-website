@@ -1,0 +1,100 @@
+body {
+    position: relative;
+/*     background-color: anthracit;
+    background: linear-gradient(217deg, rgba(255,0,0,.5), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.5), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.5), rgba(0,0,255,0) 70.71%); */
+    animation: Hue-rotate 5s infinite alternate;
+    &:after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(217deg, rgba(255,0,0,.5), rgba(255,0,0,0) 70.71%),
+        linear-gradient(127deg, rgba(0,255,0,.5), rgba(0,255,0,0) 70.71%),
+        linear-gradient(336deg, rgba(0,0,255,.5), rgba(0,0,255,0) 70.71%);
+    }
+}
+
+body, html {
+    // height: 100%;
+    // width: 100%;
+    overflow-x: hidden;
+}
+
+.object {
+   padding: 40px; 
+    background-color: rgba(53, 53, 53, 0.45);
+    border-radius: 20px;
+    box-shadow: 0px 3px 28px 1px rgba(0,0,0,0.75);
+    color: white;
+    display: flex;
+    align-items: center;
+    transform: scale(1);
+    transition: all 0.15s ease-in;
+    transform: translate3d(0,0,0);  
+    will-change: transform;
+
+    backface-visibility: hidden;
+    animation: Fade-from-left 0.5s ease-out;
+
+    &:hover {
+        // box-shadow: 0px 3px 32px 1px rgba(0,0,0,0.9);
+        background-color: rgba(53, 53, 53, 0.55);
+        transform: scale(1.1);
+        transition: all 0.5s ease-out;
+    }
+
+&__title {
+    font-family: 'Neon Online', cursive;
+    font-size: 10em;
+    animation: neonFlicker 1.5s ease-in-out infinite alternate, Fade-in 2s;
+    position: relative;
+    z-index: 1;
+}
+
+&-container {
+    position: relative; 
+    padding: 40px;
+}
+
+&-container:hover &__bg,
+&-container:focus &__bg {
+    filter: blur(10px) saturate(1) hue-rotate(180deg);
+    transition: all 3s ease-out;
+}
+
+&__bg {
+    position: absolute;
+    display: block;
+    opacity: 0.6;
+    z-index: -2;
+    top: 0;
+    left: -40vw;
+    width: 180vw;
+    height: 100%;
+
+    background-position: 50%;
+    background-size: 800%;
+    background-color: #353535;
+    filter: blur(10px) saturate(1) hue-rotate(0deg);
+    transition: all 1.5s ease-out;
+    transform: translate3d(0,0,0);  
+    will-change: transform;
+
+    animation: Fade-in 4s;
+}  
+}
+
+.image {
+ width:  200px;  
+ opacity:  1;
+ animation: Fade-in 0.25s;
+ border-radius: 10px;
+ box-shadow: 0px 3px 28px 1px rgba(0,0,0,0.6);
+
+ &-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+}

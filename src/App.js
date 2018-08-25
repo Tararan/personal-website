@@ -1,9 +1,8 @@
-import React from 'react';
+/* import React from 'react';
 import ReactDOM from 'react-dom';
 import NavList from './NavList';
 import { navListContent } from './navListContent';
-import './index.css';
-import 'bootstrap/dist/css/bootstrap.css';
+
 import JobsList from './JobsList';
 import { jobsListContent } from './jobsListContent';
 
@@ -18,3 +17,8 @@ ReactDOM.render(
         <EducationList educationListContent={educationListContent} />
     </div>
     , document.getElementById('root'));
+} */
+
+
+
+

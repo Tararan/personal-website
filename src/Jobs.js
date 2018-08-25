@@ -1,5 +1,5 @@
 import React from 'react';
-import './Object.css';
+import './styles/App.scss';
 
 const Jobs = ({ employer, description, descriptionList, image }) => {
     return (

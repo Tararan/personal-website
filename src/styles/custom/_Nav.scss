@@ -1,0 +1,23 @@
+.nav .row, .nav__list {
+    min-width: 100%;
+}
+
+.nav {
+    box-shadow: $strong-shadow;
+    background-color: $anthracit-95;
+    animation: Swing-front 0.5s ease-in-out;
+}
+
+.nav-link {
+    font-family: Neon2;
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.7) !important;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    transition: all 0.75s;
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 1) !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 1), 0 0 70px;
+    transition: all 0.5s;
+}
