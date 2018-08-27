@@ -14,7 +14,9 @@ import './styles/App.css';
 ReactDOM.render(
     <div>
         <NavList navListContent={navListContent} />
-        <JobsList jobsListContent={jobsListContent} navListContent={navListContent} />
-        <EducationList educationListContent={educationListContent} />
+        <main class="main">
+            <JobsList jobsListContent={jobsListContent} navListContent={navListContent} />
+            <EducationList educationListContent={educationListContent} navListContent={navListContent} />
+        </main>
     </div>
     , document.getElementById('root'));

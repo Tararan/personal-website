@@ -1,13 +1,23 @@
 import React from "react";
 import "./Nav.css";
 
+constructor(props) {
+  super(props);
+  this.object2 = React.createRef();
+}
+
+handleScrollToElement(event) {
+    window.scrollTo(0, this.myRef);
+}
+
+
 const Nav = ({ listItem }) => {
   return (
     <nav className="navbar navbar-dark navbar-expand-lg nav fixed-top">
       <div className="container">
         <div className="row">
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#nav-menu"
@@ -15,7 +25,7 @@ const Nav = ({ listItem }) => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon" />
+            <span className="navbar-toggler-icon" />
           </button>
           <div
             className="collapse navbar-collapse nav__list-container "
@@ -27,7 +37,7 @@ const Nav = ({ listItem }) => {
                   <li className="nav-item">
                     <a
                       className="nav-link"
-                      onclick="$('html, body').animate({scrollTop: $('#object-2').offset().top}, 2000);"
+                      onClick={handleScrollToElement}
                     >
                       {item}
                     </a>
@@ -43,6 +53,7 @@ const Nav = ({ listItem }) => {
 };
 
 export default Nav;
+/*  eslint-disable  */
 {
   /* 
     <button
@@ -53,4 +64,7 @@ export default Nav;
   Go To Violet
 </button>;
  */
+
+  // onClick="$('.main').animate({scrollTop: $('#object2').offset().top}, 2000);"
 }
+/*  eslint-enable  */

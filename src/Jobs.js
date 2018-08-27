@@ -3,7 +3,6 @@ import "./styles/App.scss";
 
 const Jobs = ({ employer, description, descriptionList, image}) => {
   return (
-    <div>
       <section className="object__container">
         <div className="container">
           <div className="object">
@@ -30,7 +29,6 @@ const Jobs = ({ employer, description, descriptionList, image}) => {
           style={{ backgroundImage: `url(${image})` }}
         />
       </section>
-    </div>
   );
 };
 

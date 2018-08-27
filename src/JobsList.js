@@ -3,7 +3,7 @@ import Jobs from "./Jobs";
 
 const JobsList = ({ jobsListContent, navListContent }) => {
   return (
-    <div className="main">
+    <div className="">
       <h2 class="object__title">
         {navListContent[0].listItem[0]}
       </h2>

@@ -1,11 +1,11 @@
 import React from 'react';
 import Education from './Education';
 
-const EducationList = ({ educationListContent }) => {
+const EducationList = ({ educationListContent, navListContent }) => {
     return (
-        <div id="object-2" className="main">
+        <div ref="object2" className="">
         <h2 class="object__title">
-            Section 2
+        {navListContent[0].listItem[1]}
         </h2>
             {
                 educationListContent.map((user, i) => {
