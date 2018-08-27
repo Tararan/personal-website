@@ -3,7 +3,7 @@ import Education from './Education';
 
 const EducationList = ({ educationListContent }) => {
     return (
-        <div className="main">
+        <div id="object-2" className="main">
         <h2 class="object__title">
             Section 2
         </h2>

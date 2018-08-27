@@ -69,10 +69,22 @@
     filter: hue-rotate(180deg); } }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  overflow-x: hidden; }
+  position: relative;
+  background-color: rgba(53, 53, 53, 0.75);
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0; }
+  body:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    width: 100%;
+    height: calc(105%);
+    background: linear-gradient(217deg, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.5), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0) 70.71%);
+    animation: Hue-rotate 15s infinite alternate; }
 
 .main {
   margin-top: 60px; }
@@ -81,7 +93,7 @@ body {
   min-width: 100%; }
 
 .nav {
-  box-shadow: 0px 3px 28px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 28px 1px rgba(53, 53, 53, 0.75);
   background-color: rgba(53, 53, 53, 0.95);
   animation: Swing-front 0.5s ease-in-out; }
 
@@ -97,31 +109,13 @@ body {
   text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 70px;
   transition: all 0.5s; }
 
-body {
-  position: relative;
-  background-color: rgba(53, 53, 53, 0.75); }
-  body:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(217deg, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.5), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0) 70.71%);
-    animation: Hue-rotate 15s infinite alternate; }
-
-body, html {
-  overflow-x: hidden; }
-
 .object {
   position: relative;
   z-index: 2;
   padding: 40px;
   background-color: rgba(53, 53, 53, 0.45);
   border-radius: 20px;
-  box-shadow: 0px 3px 28px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 28px 1px rgba(53, 53, 53, 0.75);
   color: white;
   display: flex;
   align-items: center;
@@ -131,12 +125,14 @@ body, html {
   backface-visibility: hidden;
   animation: Fade-from-left 0.5s; }
   .object__title {
-    font-family: 'Neon Online', cursive;
+    font-family: "Neon Online", cursive;
     font-size: 10em;
     animation: neonFlicker 1.5s ease-in-out infinite alternate, Fade-in 2s;
     position: relative;
-    z-index: 2; }
-  .object-container {
+    z-index: 2;
+    box-shadow: 0px 0px 30px 1px rgba(53, 53, 53, 0.85);
+    background-color: rgba(53, 53, 53, 0.45); }
+  .object__container {
     position: relative;
     padding: 40px; }
   .object__bg {
@@ -144,31 +140,30 @@ body, html {
     display: block;
     opacity: 0.5;
     z-index: 1;
-    top: 0;
+    top: -25%;
     left: -10vw;
     width: 120vw;
-    height: 100%;
+    height: 150%;
     background-position: 50%;
     background-size: 800%;
     background-color: #353535;
-    filter: blur(50px) saturate(1) brightness(1);
-    transform: translate3d(0, 0, 0);
+    filter: blur(70px) saturate(1);
     will-change: transform;
     transition: all 2.5s ease-out;
     animation: Fade-in 4s; }
-  .object-container:hover .object__bg,
-  .object-container:focus .object__bg {
-    filter: blur(70px) saturate(1.3) brightness(1);
+  .object__container:hover .object__bg,
+  .object__container:focus .object__bg {
+    filter: blur(70px) saturate(1.3);
     opacity: 1;
-    transition: all 4s ease-out; }
-
-.image {
-  width: 200px;
-  opacity: 1;
-  animation: Fade-in 0.25s;
-  border-radius: 10px;
-  box-shadow: 0px 3px 28px 1px rgba(0, 0, 0, 0.75); }
-  .image-container {
+    transition: all 4s ease-out;
+    background-size: 600%; }
+  .object__image {
+    width: 100%;
+    opacity: 1;
+    animation: Fade-in 0.25s;
+    border-radius: 10px;
+    box-shadow: 0px 3px 28px 1px rgba(53, 53, 53, 0.75); }
+  .object__image-container {
     display: flex;
     align-items: center;
     justify-content: center; }

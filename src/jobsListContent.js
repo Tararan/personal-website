@@ -27,8 +27,6 @@ export const jobsListContent = [
         Curabitur nec condimentum turpis. Nunc posuere egestas rhoncus. 
         Integer hendrerit purus eros, ac suscipit odio congue id. 
         Nam pretium nibh sed lectus suscipit, vel pulvinar lectus malesuada. 
-
-
         `,
         descriptionList: [
             'First' , 

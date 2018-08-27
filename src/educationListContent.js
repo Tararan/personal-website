@@ -11,10 +11,25 @@ export const educationListContent = [
         Curabitur nec condimentum turpis. Nunc posuere egestas rhoncus. 
         Integer hendrerit purus eros, ac suscipit odio congue id. 
         Nam pretium nibh sed lectus suscipit, vel pulvinar lectus malesuada. 
+
+        
+        Suspendisse nec arcu at turpis hendrerit 
+        faucibus et vitae ante. Etiam at pretium massa. 
+        Nulla eget quam et elit euismod placerat sit amet ac quam. 
+        Integer congue pulvinar ligula ut laoreet. 
+        Donec urna tellus, rhoncus at metus eu, venenatis lacinia ante. 
+        Curabitur nec condimentum turpis. Nunc posuere egestas rhoncus. 
+        Integer hendrerit purus eros, ac suscipit odio congue id. 
+        Nam pretium nibh sed lectus suscipit, vel pulvinar lectus malesuada. 
         `,
         descriptionList: [
             'First' , 
             'Second' , 
+            'First' , 
+            'Second' , 
+            'First' , 
+            'Second' , 
+
         ],
         image: 'https://images.unsplash.com/photo-1504662880849-32592cd4884e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=36c3d810c26fa6d391a19e11da9e3db8&auto=format&fit=crop&w=200&q=10'
     },

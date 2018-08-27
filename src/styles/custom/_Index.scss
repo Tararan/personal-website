@@ -1,8 +1,29 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  position: relative;
+  background-color: $anthracit-75;
   overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    width: 100%;
+    height: calc(105%);
+    background: linear-gradient(
+        217deg,
+        rgba(255, 0, 0, 0.5),
+        rgba(255, 0, 0, 0) 70.71%
+      ),
+      linear-gradient(127deg, rgba(0, 255, 0, 0.5), rgba(0, 255, 0, 0) 70.71%),
+      linear-gradient(336deg, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0) 70.71%);
+
+    animation: Hue-rotate 15s infinite alternate;
+  }
 }
 
 .main {
