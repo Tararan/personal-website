@@ -1,55 +1,52 @@
 body {
     position: relative;
-/*     background-color: anthracit;
-    background: linear-gradient(217deg, rgba(255,0,0,.5), rgba(255,0,0,0) 70.71%),
-            linear-gradient(127deg, rgba(0,255,0,.5), rgba(0,255,0,0) 70.71%),
-            linear-gradient(336deg, rgba(0,0,255,.5), rgba(0,0,255,0) 70.71%); */
-    animation: Hue-rotate 5s infinite alternate;
+    background-color: $anthracit-75;
+
     &:after {
+        content: "";
         position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        z-index: 0;
         width: 100%;
         height: 100%;
         background: linear-gradient(217deg, rgba(255,0,0,.5), rgba(255,0,0,0) 70.71%),
         linear-gradient(127deg, rgba(0,255,0,.5), rgba(0,255,0,0) 70.71%),
         linear-gradient(336deg, rgba(0,0,255,.5), rgba(0,0,255,0) 70.71%);
+
+        animation: Hue-rotate 15s infinite alternate;
     }
 }
 
 body, html {
-    // height: 100%;
-    // width: 100%;
     overflow-x: hidden;
 }
 
 .object {
+    position: relative;
+    z-index: 2;
    padding: 40px; 
-    background-color: rgba(53, 53, 53, 0.45);
+    background-color: $anthracit-45;
     border-radius: 20px;
-    box-shadow: 0px 3px 28px 1px rgba(0,0,0,0.75);
+    box-shadow: $strong-shadow;
     color: white;
     display: flex;
     align-items: center;
-    transform: scale(1);
+    // transform: scale(1);
     transition: all 0.15s ease-in;
     transform: translate3d(0,0,0);  
     will-change: transform;
 
     backface-visibility: hidden;
-    animation: Fade-from-left 0.5s ease-out;
-
-    &:hover {
-        // box-shadow: 0px 3px 32px 1px rgba(0,0,0,0.9);
-        background-color: rgba(53, 53, 53, 0.55);
-        transform: scale(1.1);
-        transition: all 0.5s ease-out;
-    }
+    animation: Fade-from-left 0.5s;
 
 &__title {
     font-family: 'Neon Online', cursive;
     font-size: 10em;
     animation: neonFlicker 1.5s ease-in-out infinite alternate, Fade-in 2s;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 &-container {
@@ -57,32 +54,33 @@ body, html {
     padding: 40px;
 }
 
-&-container:hover &__bg,
-&-container:focus &__bg {
-    filter: blur(10px) saturate(1) hue-rotate(180deg);
-    transition: all 3s ease-out;
-}
-
 &__bg {
     position: absolute;
     display: block;
-    opacity: 0.6;
-    z-index: -2;
+    opacity: 0.5;
+    z-index: 1;
     top: 0;
-    left: -40vw;
-    width: 180vw;
+    left: -10vw;
+    width: 120vw;
     height: 100%;
 
     background-position: 50%;
     background-size: 800%;
-    background-color: #353535;
-    filter: blur(10px) saturate(1) hue-rotate(0deg);
-    transition: all 1.5s ease-out;
+    background-color: $anthracit;
+    filter: blur(50px) saturate(1) brightness(1);
     transform: translate3d(0,0,0);  
     will-change: transform;
 
+    transition: all 2.5s ease-out;
     animation: Fade-in 4s;
 }  
+
+&-container:hover &__bg,
+&-container:focus &__bg {
+    filter: blur(70px) saturate(1.3) brightness(1);
+    opacity: 1;
+    transition: all 4s ease-out;
+}
 }
 
 .image {
@@ -90,7 +88,7 @@ body, html {
  opacity:  1;
  animation: Fade-in 0.25s;
  border-radius: 10px;
- box-shadow: 0px 3px 28px 1px rgba(0,0,0,0.6);
+ box-shadow: $strong-shadow;
 
  &-container {
     display: flex;
