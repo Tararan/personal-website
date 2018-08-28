@@ -1,16 +1,6 @@
 import React from "react";
 import "./Nav.css";
 
-constructor(props) {
-  super(props);
-  this.object2 = React.createRef();
-}
-
-handleScrollToElement(event) {
-    window.scrollTo(0, this.myRef);
-}
-
-
 const Nav = ({ listItem }) => {
   return (
     <nav className="navbar navbar-dark navbar-expand-lg nav fixed-top">
@@ -18,7 +8,7 @@ const Nav = ({ listItem }) => {
         <div className="row">
           <button
             className="navbar-toggler"
-            type="button"
+            type="button" 
             data-toggle="collapse"
             data-target="#nav-menu"
             aria-controls="nav-menu"
@@ -35,9 +25,8 @@ const Nav = ({ listItem }) => {
               {listItem.map(item => {
                 return (
                   <li className="nav-item">
-                    <a
+                    <a href="#object2"
                       className="nav-link"
-                      onClick={handleScrollToElement}
                     >
                       {item}
                     </a>
