@@ -1,9 +1,10 @@
 import React from 'react';
 import Education from './Education';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 const EducationList = ({ educationListContent, navListContent }) => {
     return (
-        <div id="object2" className="">
+        <ScrollableAnchor id={`${navListContent[0].listItem[1].replace(/\s/g, '')}`}>
         <h2 class="object__title">
         {navListContent[0].listItem[1]}
         </h2>
@@ -22,7 +23,7 @@ const EducationList = ({ educationListContent, navListContent }) => {
                     );
                 })
             }
-        </div>
+        </ScrollableAnchor>
     );
 }
 
