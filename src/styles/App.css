@@ -169,3 +169,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; }
+
+.main {
+  transform: translateY(0);
+  transition: all 0.5s; }
+
+.nav-link[href="#MenuItem1"]:active .main {
+  transform: translateY(200px);
+  transition: all 0.5s; }
+
+.nav-link[href="#MenuItem2"]:active .main {
+  transform: translateY(-200px);
+  transition: all 0.5s; }

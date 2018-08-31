@@ -1,13 +1,12 @@
 import React from 'react';
-import Education from './Education';
-import ScrollableAnchor from 'react-scrollable-anchor';
+import Education from './Education';                                                         
 
 const EducationList = ({ educationListContent, navListContent }) => {
     return (
-        <ScrollableAnchor id={`${navListContent[0].listItem[1].replace(/\s/g, '')}`}>
-        <h2 class="object__title">
-        {navListContent[0].listItem[1]}
-        </h2>
+        <div id={`${navListContent[0].listItem[1].replace(/\s/g, '')}`}>
+            <h2 class="object__title">
+                {navListContent[0].listItem[1]}
+            </h2>
             {
                 educationListContent.map((user, i) => {
                     return (
@@ -23,7 +22,7 @@ const EducationList = ({ educationListContent, navListContent }) => {
                     );
                 })
             }
-        </ScrollableAnchor>
+        </div>
     );
 }
 
