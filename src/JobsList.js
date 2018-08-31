@@ -3,7 +3,7 @@ import Jobs from "./Jobs";
 
 const JobsList = ({ jobsListContent, navListContent }) => {
   return (
-    <div className="">
+    <div id={`${navListContent[0].listItem[0].replace(/\s/g, '')}`}>
       <h2 class="object__title">
         {navListContent[0].listItem[0]}
       </h2>
