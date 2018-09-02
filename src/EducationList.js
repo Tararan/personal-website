@@ -1,16 +1,17 @@
 import React from 'react';
-import Education from './Education';                                                         
+import Education from './Education';
 
 const EducationList = ({ educationListContent, navListContent }) => {
+
     return (
-        <div id={`${navListContent[0].listItem[1].replace(/\s/g, '')}`}>
-            <h2 class="object__title">
+        <section className="section" id={`section-${navListContent[0].listItem[1].replace(/\s/g, '')}`}>
+            <h2 className="object__title">
                 {navListContent[0].listItem[1]}
             </h2>
             {
                 educationListContent.map((user, i) => {
                     return (
-                        <div>
+                        <div key={`Education ${i}`}>
                             <Education
                                 id={user.id}
                                 employer={user.employer}
@@ -22,7 +23,7 @@ const EducationList = ({ educationListContent, navListContent }) => {
                     );
                 })
             }
-        </div>
+        </section>
     );
 }
 

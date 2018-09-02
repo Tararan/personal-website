@@ -7,7 +7,7 @@ const NavList = ({ navListContent }) => {
             {
                 navListContent.map((user, i) => {
                     return (
-                        <Nav
+                        <Nav key={`NavList ${i}`}
                             listItem={user.listItem}
                         />
                     );

@@ -1,5 +1,21 @@
 import React from "react";
+// import ReactDOM from "react-dom";
 import "./Nav.css";
+import scrollToComponent from 'react-scroll-to-component';
+
+const HandleClick = (e) => {
+    console.log(e.target.id);
+      const ScrollHere = document.getElementById('section-' + e.target.id);
+      scrollToComponent(ScrollHere, {
+        offset: -40,
+        align: 'top',
+        duration: 1500
+    });
+/*     window.scrollTo({
+      'top': ScrollHere.offsetTop, 
+      'behavior': 'smooth'
+    }); */
+}
 
 const Nav = ({ listItem }) => {
   return (
@@ -20,8 +36,8 @@ const Nav = ({ listItem }) => {
             <ul className="navbar-nav nav__list d-flex justify-content-between">
               {listItem.map(item => {
                 return (
-                  <li className="nav-item">
-                    <a href={`#${item.replace(/\s/g, '')}`} className="nav-link">
+                  <li key={`Nav ${item}`} className="nav-item">
+                    <a onClick={HandleClick} id={`${item.replace(/\s/g, '')}`} className="nav-link">
                       {item}
                     </a>
                   </li>
@@ -35,20 +51,4 @@ const Nav = ({ listItem }) => {
   );
 }
 
-
 export default Nav;
-/*  eslint-disable  */
-{
-  /* 
-    <button
-  onClick={() =>
-    scrollToComponent(this.Violet, { offset: 0, align: "top", duration: 1500 })
-  }
->
-  Go To Violet
-</button>;
- */
-
-  // onClick="$('.main').animate({scrollTop: $('#object2').offset().top}, 2000);"
-}
-/*  eslint-enable  */

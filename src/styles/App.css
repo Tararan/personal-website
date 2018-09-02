@@ -171,13 +171,10 @@ body {
     justify-content: center; }
 
 .main {
-  transform: translateY(0);
-  transition: all 0.5s; }
+  transform: translateY(0); }
 
-.nav-link[href="#MenuItem1"]:active .main {
-  transform: translateY(200px);
-  transition: all 0.5s; }
+.nav-link.MenuItem1:focus .main {
+  transform: translateY(0); }
 
-.nav-link[href="#MenuItem2"]:active .main {
-  transform: translateY(-200px);
-  transition: all 0.5s; }
+.nav-link.MenuItem2:focus ~ .main {
+  transform: translateY(2068px); }

@@ -11,12 +11,12 @@ const Jobs = ({ employer, description, descriptionList, image}) => {
                 <h3 className="employer">{employer}</h3>
                 <div className="description">{description}</div>
                 <ul className="description-list">
-                  {descriptionList.map(item => (
-                    <li>{item}</li>
+                  {descriptionList.map((item, i) => (
+                    <li key={`Jobs ${item}${i}`}>{item}</li>
                   ))}
                 </ul>
               </div>
-              <div className="col-sm-4">
+              <div className="col-sm-4"> 
                 <div className="object__image-container">
                   <img className="object__image" src={image} alt="logo" />
                 </div>

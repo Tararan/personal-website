@@ -11,8 +11,8 @@ const Education = ({ employer, description, descriptionList, image }) => {
               <h3 className="employer">{employer}</h3>
               <div className="description">{description}</div>
               <ul className="description-list">
-                {descriptionList.map(item => (
-                  <li>{item}</li>
+                {descriptionList.map((item, i) => (
+                  <li key={`Nav ${item}${i}`}>{item}</li>
                 ))}
               </ul>
             </div>

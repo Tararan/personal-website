@@ -3,13 +3,13 @@ import Jobs from "./Jobs";
 
 const JobsList = ({ jobsListContent, navListContent }) => {
   return (
-    <div id={`${navListContent[0].listItem[0].replace(/\s/g, '')}`}>
-      <h2 class="object__title">
+    <section className="section" id={`section-${navListContent[0].listItem[0].replace(/\s/g, '')}`}>
+      <h2 className="object__title">
         {navListContent[0].listItem[0]}
       </h2>
       {jobsListContent.map((user, i) => {
         return (
-          <div>
+          <div key={`Jobs ${i}`}>
             <Jobs
               id={user.id}
               employer={user.employer}
@@ -20,8 +20,8 @@ const JobsList = ({ jobsListContent, navListContent }) => {
           </div>
         );
       })}
-    </div>
+    </section>
   );
 };
 
-export default JobsList;
+export default JobsList;  
