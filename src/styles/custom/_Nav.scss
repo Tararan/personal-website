@@ -1,23 +1,54 @@
-.nav .row, .nav__list {
-    min-width: 100%;
+.nav .row,
+.nav__list {
+  min-width: 100%;
 }
 
 .nav {
-    box-shadow: $strong-shadow;
-    background-color: $anthracit-95;
-    animation: Swing-front 0.5s ease-in-out;
+  box-shadow: $strong-shadow;
+  background-color: $anthracit-95;
+
+  @media (max-width: $screen-xs-max) {
+    height: 45px;
+    padding: 0;
+  }
+
+  &__list {
+    @media (max-width: $screen-xs-max) {
+      box-shadow: $strong-shadow;
+      background-color: $anthracit-95;
+      text-align: center;
+      position: relative;
+      top: -5px;
+      border-top: 1px solid $black-08;
+    }
+  }
+}
+
+.collapse:not(.show) {
+  display: block;
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
+  transition: transform 0.25s, opacity 0.15s;
+}
+
+.collapse.show {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.25s, opacity 0.15s;
 }
 
 .nav-link {
-    font-family: Neon2;
-    font-size: 1.5em;
-    color: rgba(255, 255, 255, 0.7) !important;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
-    transition: all 0.75s;
+  font-family: Neon2;
+  font-size: 1.5em;
+  color: rgba(255, 255, 255, 0.7) !important;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  transition: all 0.75s;
 }
 
 .nav-link:hover {
-    color: rgba(255, 255, 255, 1) !important;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 1), 0 0 70px;
-    transition: all 0.5s;
+  color: rgba(255, 255, 255, 1) !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1),
+    0 0 30px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 1), 0 0 70px;
+  transition: all 0.5s;
+  cursor: pointer;
 }

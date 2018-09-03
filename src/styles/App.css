@@ -1,3 +1,79 @@
+/* STYLING FOR COLLAPSE BURGER */
+/* * Collapse */
+.hamburger--collapse .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  transition-duration: 0.13s;
+  transition-delay: 0.13s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .hamburger--collapse .hamburger-inner::after {
+    top: -20px;
+    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear; }
+  .hamburger--collapse .hamburger-inner::before {
+    transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--collapse.is-active .hamburger-inner {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .hamburger--collapse.is-active .hamburger-inner::after {
+    top: 0;
+    opacity: 0;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear; }
+  .hamburger--collapse.is-active .hamburger-inner::before {
+    top: 0;
+    transform: rotate(-90deg);
+    transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+.hamburger {
+  position: relative;
+  z-index: 2000;
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  @media (max-width: 576px) {
+    .hamburger {
+      padding: 10px 10px; } }
+  .hamburger:hover {
+    opacity: 0.7; }
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -10px; }
+  .hamburger-inner::after {
+    bottom: -10px; }
+
 @font-face {
   font-family: 'Neon Online';
   src: url(../fonts/I_am_online_with_u.ttf) format("truetype"), url(../fonts/I_am_online_with_u.woff) format("woff"); }
@@ -62,11 +138,31 @@
   100% {
     opacity: 1; } }
 
+@keyframes Fade-in-05 {
+  0% {
+    display: none;
+    opacity: 0; }
+  20% {
+    display: block;
+    opacity: 0; }
+  100% {
+    opacity: 0.5; } }
+
 @keyframes Hue-rotate {
   0% {
     filter: hue-rotate(0); }
   100% {
     filter: hue-rotate(180deg); } }
+
+@keyframes Fade-from-top {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0); }
+  80% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
 
 body {
   position: relative;
@@ -82,20 +178,49 @@ body {
     right: 0;
     z-index: -1;
     width: 100%;
-    height: calc(105%);
+    height: calc(100% + 180px);
     background: linear-gradient(217deg, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.5), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0) 70.71%);
     animation: Hue-rotate 15s infinite alternate; }
 
-.main {
-  margin-top: 60px; }
+body, html {
+  overflow-x: hidden; }
 
-.nav .row, .nav__list {
+.main {
+  padding-top: 35px; }
+  @media (max-width: 576px) {
+    .main {
+      padding-top: 0px; } }
+
+.nav .row,
+.nav__list {
   min-width: 100%; }
 
 .nav {
   box-shadow: 0px 3px 28px 1px rgba(53, 53, 53, 0.75);
-  background-color: rgba(53, 53, 53, 0.95);
-  animation: Swing-front 0.5s ease-in-out; }
+  background-color: rgba(53, 53, 53, 0.95); }
+  @media (max-width: 576px) {
+    .nav {
+      height: 45px;
+      padding: 0; } }
+  @media (max-width: 576px) {
+    .nav__list {
+      box-shadow: 0px 3px 28px 1px rgba(53, 53, 53, 0.75);
+      background-color: rgba(53, 53, 53, 0.95);
+      text-align: center;
+      position: relative;
+      top: -5px;
+      border-top: 1px solid rgba(0, 0, 0, 0.2); } }
+
+.collapse:not(.show) {
+  display: block;
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
+  transition: transform 0.25s, opacity 0.15s; }
+
+.collapse.show {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.25s, opacity 0.15s; }
 
 .nav-link {
   font-family: Neon2;
@@ -107,7 +232,8 @@ body {
 .nav-link:hover {
   color: white !important;
   text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 70px;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  cursor: pointer; }
 
 .object {
   position: relative;
@@ -127,16 +253,22 @@ body {
   animation: Fade-from-left 0.5s; }
   .object__title {
     font-family: "Neon Online", cursive;
-    font-size: 10em;
+    font-size: 12em;
     margin-top: 40px;
     animation: neonFlicker 1.5s ease-in-out infinite alternate, Fade-in 2s;
     position: relative;
     z-index: 2;
     box-shadow: 0px 0px 30px 1px rgba(53, 53, 53, 0.85);
     background-color: rgba(53, 53, 53, 0.45); }
+    @media (max-width: 576px) {
+      .object__title {
+        font-size: 4em; } }
   .object__container {
     position: relative;
     padding: 40px; }
+    @media (max-width: 576px) {
+      .object__container {
+        padding: 0; } }
   .object__bg {
     position: absolute;
     display: block;
@@ -151,18 +283,19 @@ body {
     background-color: #353535;
     filter: blur(70px) saturate(1);
     will-change: transform;
-    transition: all 2.5s ease-out;
-    animation: Fade-in 4s; }
+    transition: all 10s ease-out;
+    animation: Fade-in-05 4s; }
   .object__container:hover .object__bg,
-  .object__container:focus .object__bg {
-    filter: blur(70px) saturate(1.3);
+  .object__container:focus .object__bg,
+  .object__container:active .object__bg {
+    filter: blur(70px) saturate(1.5);
     opacity: 1;
-    transition: all 4s ease-out;
-    background-size: 600%; }
+    transition: all 2s ease-out;
+    background-size: 500%; }
   .object__image {
     width: 100%;
     opacity: 1;
-    animation: Fade-in 0.25s;
+    animation: Fade-in 0.5s;
     border-radius: 10px;
     box-shadow: 0px 3px 28px 1px rgba(53, 53, 53, 0.75); }
   .object__image-container {

@@ -3,6 +3,7 @@ body {
   background-color: $anthracit-75;
   overflow-x: hidden;
   height: 100%;
+  // width: 100%;
   margin: 0;
 
   &:after {
@@ -13,7 +14,7 @@ body {
     right: 0;
     z-index: -1;
     width: 100%;
-    height: calc(105%);
+    height: calc(100% + 180px);
     background: linear-gradient(
         217deg,
         rgba(255, 0, 0, 0.5),
@@ -26,6 +27,14 @@ body {
   }
 }
 
+body, html {
+  overflow-x: hidden;
+}
+
 .main {
-  margin-top: 60px;
+  padding-top: 35px;
+
+  @media (max-width: $screen-xs-max) {
+    padding-top: 0px;
+  }
 }

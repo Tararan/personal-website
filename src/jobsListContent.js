@@ -36,7 +36,8 @@ export const jobsListContent = [
             'First' , 
             'Second'
         ],
-        image: 'http://www.exalt.design/uploads/media/default/0001/01/thumb_10_default_big.png'
+        image: 'https://image.flaticon.com/icons/svg/145/145813.svg'
+        // image: 'http://www.exalt.design/uploads/media/default/0001/01/thumb_10_default_big.png'
         // image: 'https://images.unsplash.com/photo-1531386450450-969f935bd522?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0e6037f0a7cd63b48cc1562e348eb3a&auto=format&fit=crop&w=200&q=10'
     },
     {
@@ -58,7 +59,8 @@ export const jobsListContent = [
             'Third' , 
         ],
         // image: 'https://vignette.wikia.nocookie.net/logopedia/images/5/5e/Icloud.png/revision/latest/zoom-crop/width/90/height/55?cb=20151107204136'
-        image: 'https://images.unsplash.com/photo-1510797215324-95aa89f43c33?ixlib=rb-0.3.5&s=1993d88b0615e6c9e635fd3bcf3d6bb8&auto=format&fit=crop&w=200&q=10'
+        // image: 'https://images.unsplash.com/photo-1510797215324-95aa89f43c33?ixlib=rb-0.3.5&s=1993d88b0615e6c9e635fd3bcf3d6bb8&auto=format&fit=crop&w=200&q=10'
+        image: 'https://images.unsplash.com/photo-1535709418-6f14c8e87bb6?ixlib=rb-0.3.5&s=5ae3f410af393fa203731b5712d5ecc0&auto=format&fit=crop&w=200&q=10'
     },
     
     {
