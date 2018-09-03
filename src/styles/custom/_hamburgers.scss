@@ -113,12 +113,13 @@ $hamburger-types: (
 .hamburger {
   position: relative;
   z-index: 2000;
-  padding: $hamburger-padding-y $hamburger-padding-x;
+  padding: $hamburger-padding-xs-x $hamburger-padding-xs-y;
+  display: none;
 
   @media (max-width: $screen-xs-max) {
-    padding: $hamburger-padding-xs-x $hamburger-padding-xs-y;
+    display: inline-block;
   }
-  display: inline-block;
+
   cursor: pointer;
   transition-property: opacity, filter;
   transition-duration: $hamburger-hover-transition-duration;

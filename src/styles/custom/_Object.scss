@@ -15,7 +15,6 @@
   will-change: transform;
 
   backface-visibility: hidden;
-  animation: Fade-from-left 0.5s;
 
   &__title {
     font-family: "Neon Online", cursive;
@@ -24,12 +23,16 @@
     animation: neonFlicker 1.5s ease-in-out infinite alternate, Fade-in 2s;
     position: relative;
     z-index: 2;
-    box-shadow: $stronger-shadow;
-    background-color: $anthracit-45;
 
     @media (max-width: $screen-xs-max) {
       font-size: 4em;
     }
+  }
+
+  &__title p { 
+    box-shadow: $stronger-shadow;
+    background-color: $anthracit-45;
+    z-index: 3;
   }
 
   &__container {
@@ -41,33 +44,41 @@
     }
   }
 
-  &__bg {
+  &__bg, &__title-bg  {
     position: absolute;
     display: block;
     opacity: 0.5;
     z-index: 1;
-    top: -25%;
+    top: 0%;
     left: -10vw;
     width: 120vw;
-    height: 150%;
+    height: 100%;
 
     background-position: 50%;
-    background-size: 800%;
+    background-size: 200%;
     background-color: $anthracit;
-    filter: blur(70px) saturate(1);
+    filter: blur(40px) saturate(1);
     will-change: transform;
 
     transition: all 10s ease-out;
     animation: Fade-in-05 4s;
   }
 
+  &__title-bg  {
+    top: -25%;
+    height: 150%;
+    opacity: 1;
+    z-index: -2;
+    background-size: 400%;
+  }
+
   &__container:hover &__bg,
   &__container:focus &__bg,
   &__container:active &__bg {
-    filter: blur(70px) saturate(1.5);
+    filter: blur(40px) saturate(1.5);
     opacity: 1;
     transition: all 2s ease-out;
-    background-size: 500%;
+    background-size: 150%;
   }
 
   &__image {

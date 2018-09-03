@@ -53,3 +53,12 @@
         80% {   opacity: 0.5; }
         100% {  opacity: 1; transform: translate3d(0, 0, 0); }
 }
+
+
+@keyframes Fade-out {
+        0%      { opacity: 0; display: none; }
+        1%      { opacity: 1; }
+        80%     { opacity: 0.9; }
+        99%     { opacity: 0;  }
+        100%    { display: none; }
+}

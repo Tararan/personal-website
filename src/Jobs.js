@@ -1,4 +1,5 @@
 import React from "react";
+import Fade from 'react-reveal/Fade';
 import "./styles/App.scss";
 
 const Jobs = ({ employer, description, descriptionList, image}) => {
@@ -17,17 +18,21 @@ const Jobs = ({ employer, description, descriptionList, image}) => {
                 </ul>
               </div>
               <div className="col-sm-4"> 
+              <Fade>
                 <div className="object__image-container">
                   <img className="object__image" src={image} alt="logo" />
                 </div>
+                </Fade>
               </div>
             </div>
           </div>
         </div>
+        <Fade>
         <div
           className="object__bg"
           style={{ backgroundImage: `url(${image})` }}
         />
+        </Fade>
       </section>
   );
 };

@@ -4,9 +4,11 @@ import Education from './Education';
 const EducationList = ({ educationListContent, navListContent }) => {
 
     return (
+    
         <section className="section" id={`section-${navListContent[0].listItem[1].replace(/\s/g, '')}`}>
             <h2 className="object__title">
-                {navListContent[0].listItem[1]}
+                <p>{navListContent[0].listItem[1]}</p>
+                <div className="object__title-bg" style={{ backgroundImage: `url(${educationListContent[0].image})` }} ></div>
             </h2>
             {
                 educationListContent.map((user, i) => {

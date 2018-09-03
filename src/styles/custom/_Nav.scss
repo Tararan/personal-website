@@ -24,31 +24,37 @@
   }
 }
 
-.collapse:not(.show) {
-  display: block;
-  opacity: 0;
-  transform: translate3d(0, -100%, 0);
-  transition: transform 0.25s, opacity 0.15s;
-}
-
-.collapse.show {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-    transition: transform 0.25s, opacity 0.15s;
-}
-
 .nav-link {
   font-family: Neon2;
   font-size: 1.5em;
   color: rgba(255, 255, 255, 0.7) !important;
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
   transition: all 0.75s;
-}
 
-.nav-link:hover {
+&:hover {
   color: rgba(255, 255, 255, 1) !important;
   text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1),
     0 0 30px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 1), 0 0 70px;
   transition: all 0.5s;
   cursor: pointer;
+}
+}
+
+.collapse:not(.show) {
+
+  @media (max-width: $screen-xs-max) {
+  display: block;
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
+  transition: transform 0.25s, opacity 0.15s;
+  }
+}
+
+.collapse.show {
+
+  @media (max-width: $screen-xs-max) {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.25s, opacity 0.15s; 
+  }
 }
