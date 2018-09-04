@@ -40,8 +40,7 @@ export const educationListContent = [
         Nam pretium nibh sed lectus suscipit, vel pulvinar lectus malesuada. 
         `,
     descriptionList: ["First", "Second", "Third"],
-    image:
-      "https://images.unsplash.com/photo-1504587614488-3259c5c1d9b7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7aa9d6f4ba64dfeb28ddb06af263dfa9"
+    image: "https://images.unsplash.com/photo-1536059540012-f2ed455bc0b1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=95cf567b5bbc468456acfac96853600a"
   },
 
   {
