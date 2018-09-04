@@ -16,13 +16,17 @@
   backface-visibility: hidden;
 
   &__title {
+    box-shadow: $stronger-shadow;
     font-family: "Neon Online", cursive;
     width: 120%;
     font-size: 12em;
-    margin-top: 40px;
+    margin-top: 0;
+    // margin-top: 40px;
+    margin-bottom: 0;
     animation: neonFlicker 1.5s ease-in-out infinite alternate, Fade-in 2s;
     position: relative;
-    z-index: 2;
+    z-index: 4;
+    overflow-y: hidden;
 
     @media (max-width: $screen-xs-max) {
       font-size: 4em;
@@ -30,8 +34,8 @@
   }
 
   &__title p { 
-    box-shadow: $stronger-shadow;
     background-color: $anthracit-45;
+    margin-bottom: 0;
     z-index: 3;
   }
 
@@ -48,19 +52,19 @@
     position: absolute;
     display: block;
     z-index: 1;
-    top: -5%;
+    top: 0;
     left: -20vw;
     width: 120vw;
-    height: 150%;
+    height: 100%;
 
     background-position: 50%;
     background-size: 100%;
     background-color: $anthracit;
-    filter: blur(60px) saturate(1.4) brightness(1.1);
+    filter: blur(10px) saturate(1.4) brightness(1);
 
     @media (max-width: $screen-xs-max) {
       background-size: 80%;
-      filter: blur(50px) saturate(1.9) brightness(1);
+      filter: blur(10px) saturate(1.9) brightness(1);
     }
 
     transition: background-size 10s ease-in-out, filter 10s ease-out, opacity 10s  ease-out;
@@ -68,8 +72,9 @@
   }
 
   &__title-bg  {
-    top: -20%;
-    height: 140%;
+    top: 0;
+    // filter: blur(40px);
+    height: 100%;
     z-index: -2;
     background-size: 400%;
   }
@@ -77,7 +82,7 @@
   &__container:hover &__bg,
   &__container:focus &__bg,
   &__container:active &__bg {
-    filter: blur(60px) saturate(1.6) brightness(1);
+    filter: blur(10px) saturate(1.6) brightness(1.2);
     background-size: 250%;
 
     @media (max-width: $screen-xs-max) {

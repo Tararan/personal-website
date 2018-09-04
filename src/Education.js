@@ -21,7 +21,7 @@ const Education = ({ employer, description, descriptionList, image }) => {
               </div>
               <div className="col-sm-4">
                 <div className="object__image-container">
-                  <img className="object__image" src={image} alt="logo" />
+                <img className="object__image" src={`${image}&auto=format&fit=crop&w=500&q=1`} alt="logo" />
                 </div>
               </div>
             </div>

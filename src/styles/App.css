@@ -269,24 +269,24 @@ body, html {
   color: white;
   display: flex;
   align-items: center;
-  transition: all 0.15s ease-in;
-  transform: translate3d(0, 0, 0);
-  will-change: transform;
   backface-visibility: hidden; }
   .object__title {
+    box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
     font-family: "Neon Online", cursive;
     width: 120%;
     font-size: 12em;
-    margin-top: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
     animation: neonFlicker 1.5s ease-in-out infinite alternate, Fade-in 2s;
     position: relative;
-    z-index: 2; }
+    z-index: 4;
+    overflow-y: hidden; }
     @media (max-width: 576px) {
       .object__title {
         font-size: 4em; } }
   .object__title p {
-    box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.35);
     background-color: rgba(53, 53, 53, 0.45);
+    margin-bottom: 0;
     z-index: 3; }
   .object__container {
     position: relative;
@@ -298,29 +298,29 @@ body, html {
     position: absolute;
     display: block;
     z-index: 1;
-    top: -5%;
+    top: 0;
     left: -20vw;
     width: 120vw;
-    height: 150%;
+    height: 100%;
     background-position: 50%;
     background-size: 100%;
     background-color: #353535;
-    filter: blur(60px) saturate(1.4) brightness(1.1);
+    filter: blur(10px) saturate(1.4) brightness(1);
     transition: background-size 10s ease-in-out, filter 10s ease-out, opacity 10s  ease-out;
     animation: Fade-in-05 4s; }
     @media (max-width: 576px) {
       .object__bg, .object__title-bg {
         background-size: 80%;
-        filter: blur(50px) saturate(1.9) brightness(1); } }
+        filter: blur(10px) saturate(1.9) brightness(1); } }
   .object__title-bg {
-    top: -20%;
-    height: 140%;
+    top: 0;
+    height: 100%;
     z-index: -2;
     background-size: 400%; }
   .object__container:hover .object__bg,
   .object__container:focus .object__bg,
   .object__container:active .object__bg {
-    filter: blur(60px) saturate(1.6) brightness(1);
+    filter: blur(10px) saturate(1.6) brightness(1.2);
     background-size: 250%;
     transition: background-size 2s ease-out, filter 2s ease-out, opacity 2s ease-out; }
     @media (max-width: 576px) {
