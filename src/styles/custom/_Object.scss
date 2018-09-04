@@ -18,6 +18,7 @@
 
   &__title {
     font-family: "Neon Online", cursive;
+    width: 120%;
     font-size: 12em;
     margin-top: 40px;
     animation: neonFlicker 1.5s ease-in-out infinite alternate, Fade-in 2s;
@@ -47,27 +48,29 @@
   &__bg, &__title-bg  {
     position: absolute;
     display: block;
-    opacity: 0.5;
     z-index: 1;
-    top: 0%;
-    left: -10vw;
+    top: -5%;
+    left: -20vw;
     width: 120vw;
-    height: 100%;
+    height: 150%;
 
     background-position: 50%;
-    background-size: 200%;
+    background-size: 100%;
     background-color: $anthracit;
-    filter: blur(40px) saturate(1);
-    will-change: transform;
+    filter: blur(60px) saturate(1.4) brightness(1.1);
 
-    transition: all 10s ease-out;
+    @media (max-width: $screen-xs-max) {
+      background-size: 80%;
+      filter: blur(50px) saturate(1.9) brightness(1);
+    }
+
+    transition: background-size 10s ease-in-out, filter 10s ease-out, opacity 10s  ease-out;
     animation: Fade-in-05 4s;
   }
 
   &__title-bg  {
-    top: -25%;
-    height: 100%;
-    opacity: 1;
+    top: -20%;
+    height: 140%;
     z-index: -2;
     background-size: 400%;
   }
@@ -75,10 +78,14 @@
   &__container:hover &__bg,
   &__container:focus &__bg,
   &__container:active &__bg {
-    filter: blur(40px) saturate(1.5);
-    opacity: 1;
-    transition: all 2s ease-out;
-    background-size: 150%;
+    filter: blur(60px) saturate(1.6) brightness(1);
+    background-size: 250%;
+
+    @media (max-width: $screen-xs-max) {
+      background-size: 500%;
+      filter: blur(50px) saturate(1.9) brightness(1);
+    }
+    transition: background-size 2s ease-out, filter 2s ease-out, opacity 2s ease-out;
   }
 
   &__image {

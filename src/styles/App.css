@@ -182,8 +182,9 @@ body {
   background-color: rgba(53, 53, 53, 0.75);
   overflow: hidden;
   height: 100%;
-  margin: 0; }
-  body:after {
+  margin: 0;
+  /* 
+  &:after {
     content: "";
     position: absolute;
     top: 0;
@@ -191,14 +192,23 @@ body {
     right: 0;
     z-index: -1;
     width: 100%;
-    background: linear-gradient(217deg, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.5), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0) 70.71%);
-    animation: Hue-rotate 15s infinite alternate; }
+    height: calc(120%);
+    background: linear-gradient(
+        217deg,
+        rgba(255, 0, 0, 0.5),
+        rgba(255, 0, 0, 0) 70.71%
+      ),
+      linear-gradient(127deg, rgba(0, 255, 0, 0.5), rgba(0, 255, 0, 0) 70.71%),
+      linear-gradient(336deg, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0) 70.71%);
+
+    animation: Hue-rotate 15s infinite alternate;
+  } */ }
 
 body, html {
   overflow-x: hidden; }
 
 .main {
-  padding-top: 35px; }
+  padding-top: 20px; }
   @media (max-width: 576px) {
     .main {
       padding-top: 0px; } }
@@ -208,7 +218,7 @@ body, html {
   min-width: 100%; }
 
 .nav {
-  box-shadow: 0px 3px 28px 1px rgba(53, 53, 53, 0.75);
+  box-shadow: 0px 14px 72px 1px rgba(0, 0, 0, 0.65);
   background-color: rgba(53, 53, 53, 0.95); }
   @media (max-width: 576px) {
     .nav {
@@ -216,7 +226,7 @@ body, html {
       padding: 0; } }
   @media (max-width: 576px) {
     .nav__list {
-      box-shadow: 0px 3px 28px 1px rgba(53, 53, 53, 0.75);
+      box-shadow: 0px 14px 72px 1px rgba(0, 0, 0, 0.65);
       background-color: rgba(53, 53, 53, 0.95);
       text-align: center;
       position: relative;
@@ -255,7 +265,7 @@ body, html {
   margin-top: 60px;
   background-color: rgba(53, 53, 53, 0.45);
   border-radius: 20px;
-  box-shadow: 0px 3px 28px 1px rgba(53, 53, 53, 0.75);
+  box-shadow: 0px 14px 72px 1px rgba(0, 0, 0, 0.65);
   color: white;
   display: flex;
   align-items: center;
@@ -265,6 +275,7 @@ body, html {
   backface-visibility: hidden; }
   .object__title {
     font-family: "Neon Online", cursive;
+    width: 120%;
     font-size: 12em;
     margin-top: 40px;
     animation: neonFlicker 1.5s ease-in-out infinite alternate, Fade-in 2s;
@@ -274,7 +285,7 @@ body, html {
       .object__title {
         font-size: 4em; } }
   .object__title p {
-    box-shadow: 0px 0px 30px 1px rgba(53, 53, 53, 0.85);
+    box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.35);
     background-color: rgba(53, 53, 53, 0.45);
     z-index: 3; }
   .object__container {
@@ -286,38 +297,44 @@ body, html {
   .object__bg, .object__title-bg {
     position: absolute;
     display: block;
-    opacity: 0.5;
     z-index: 1;
-    top: 0%;
-    left: -10vw;
+    top: -5%;
+    left: -20vw;
     width: 120vw;
-    height: 100%;
+    height: 150%;
     background-position: 50%;
-    background-size: 200%;
+    background-size: 100%;
     background-color: #353535;
-    filter: blur(40px) saturate(1);
-    will-change: transform;
-    transition: all 10s ease-out;
+    filter: blur(60px) saturate(1.4) brightness(1.1);
+    transition: background-size 10s ease-in-out, filter 10s ease-out, opacity 10s  ease-out;
     animation: Fade-in-05 4s; }
+    @media (max-width: 576px) {
+      .object__bg, .object__title-bg {
+        background-size: 80%;
+        filter: blur(50px) saturate(1.9) brightness(1); } }
   .object__title-bg {
-    top: -25%;
-    height: 100%;
-    opacity: 1;
+    top: -20%;
+    height: 140%;
     z-index: -2;
     background-size: 400%; }
   .object__container:hover .object__bg,
   .object__container:focus .object__bg,
   .object__container:active .object__bg {
-    filter: blur(40px) saturate(1.5);
-    opacity: 1;
-    transition: all 2s ease-out;
-    background-size: 150%; }
+    filter: blur(60px) saturate(1.6) brightness(1);
+    background-size: 250%;
+    transition: background-size 2s ease-out, filter 2s ease-out, opacity 2s ease-out; }
+    @media (max-width: 576px) {
+      .object__container:hover .object__bg,
+      .object__container:focus .object__bg,
+      .object__container:active .object__bg {
+        background-size: 500%;
+        filter: blur(50px) saturate(1.9) brightness(1); } }
   .object__image {
     width: 100%;
     opacity: 1;
     animation: Fade-in 0.5s;
     border-radius: 10px;
-    box-shadow: 0px 3px 28px 1px rgba(53, 53, 53, 0.75); }
+    box-shadow: 0px 14px 72px 1px rgba(0, 0, 0, 0.65); }
   .object__image-container {
     display: flex;
     align-items: center;
