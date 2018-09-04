@@ -1,8 +1,9 @@
 .object {
   position: relative;
   z-index: 2;
+  margin: 40px 0;
   padding: 40px;
-  margin-top: 60px;
+  // margin-top: 60px;
 
   background-color: $anthracit-45;
   border-radius: 20px;
@@ -46,6 +47,10 @@
     @media (max-width: $screen-xs-max) {
       padding: 0;
     }
+  }
+
+  &__bg {
+    border-bottom: 20px solid $anthracit-75;
   }
 
   &__bg, &__title-bg  {
