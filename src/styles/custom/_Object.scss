@@ -10,9 +10,8 @@
   color: white;
   display: flex;
   align-items: center;
-  transition: all 0.15s ease-in;
-  transform: translate3d(0, 0, 0);
-  will-change: transform;
+  // transition: all 0.15s ease-in;
+  // transform: translate3d(0, 0, 0);
 
   backface-visibility: hidden;
 
