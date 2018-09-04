@@ -1,7 +1,7 @@
 body {
   position: relative;
   background-color: $anthracit-75;
-  overflow-x: hidden;
+  overflow: hidden;
   height: 100%;
   // width: 100%;
   margin: 0;
@@ -14,7 +14,7 @@ body {
     right: 0;
     z-index: -1;
     width: 100%;
-    height: calc(100% + 180px);
+    // height: calc(120%);
     background: linear-gradient(
         217deg,
         rgba(255, 0, 0, 0.5),
