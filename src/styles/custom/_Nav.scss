@@ -6,43 +6,48 @@
 .nav {
   box-shadow: $strong-shadow;
   background-color: $anthracit-95;
+  border-bottom: 1px solid $white-glass;
 
-  @media (max-width: $screen-xs-max) {
+  @media (max-width: $screen-md-max) {
     height: 45px;
     padding: 0;
   }
 
   &__list {
-    @media (max-width: $screen-xs-max) {
+    @media (max-width: $screen-md-max) {
       box-shadow: $strong-shadow;
       background-color: $anthracit-95;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 100vw;
       text-align: center;
       position: relative;
       top: -5px;
-      border-top: 1px solid $black-08;
+      border-top: 1px solid $black-02;
     }
   }
 }
 
 .nav-link {
-  font-family: Neon2;
-  font-size: 1.5em;
-  color: rgba(255, 255, 255, 0.7) !important;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  font-family: 'Abril Fatface', cursive;
+  font-size: 1.8em;
+  // color: rgba(255, 255, 255, 0.7) !important;
+  color: $black !important;
+  // text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
   transition: all 0.75s;
 
 &:hover {
-  color: rgba(255, 255, 255, 1) !important;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1),
-    0 0 30px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 1), 0 0 70px;
-  transition: all 0.5s;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   cursor: pointer;
 }
 }
 
 .collapse:not(.show) {
 
-  @media (max-width: $screen-xs-max) {
+  @media (max-width: $screen-md-max) {
   display: block;
   opacity: 0;
   transform: translate3d(0, -100%, 0);
@@ -52,7 +57,7 @@
 
 .collapse.show {
 
-  @media (max-width: $screen-xs-max) {
+  @media (max-width: $screen-md-max) {
     opacity: 1;
     transform: translate3d(0, 0, 0);
     transition: transform 0.25s, opacity 0.15s; 

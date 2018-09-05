@@ -10,9 +10,9 @@ const Jobs = ({ employer, description, descriptionList, image }) => {
           <div className="object">
             <div className="row">
               <div className="col-sm-8">
-                <h3 className="employer">{employer}</h3>
-                <div className="description">{description}</div>
-                <ul className="description-list">
+                <h3 className="object__employer">{employer}</h3>
+                <div className="object__description">{description}</div>
+                <ul className="object__description-list">
                   {descriptionList.map((item, i) => (
                     <li key={`Jobs ${item}${i}`}>{item}</li>
                   ))}

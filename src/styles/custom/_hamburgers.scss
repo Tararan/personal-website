@@ -116,7 +116,7 @@ $hamburger-types: (
   padding: $hamburger-padding-xs-x $hamburger-padding-xs-y;
   display: none;
 
-  @media (max-width: $screen-xs-max) {
+  @media (max-width: $screen-md-max) {
     display: inline-block;
   }
 

@@ -1,5 +1,13 @@
 /* STYLING FOR COLLAPSE BURGER */
 /* * Collapse */
+@import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great");
+@import url("https://fonts.googleapis.com/css?family=Poiret+One");
+@import url("https://fonts.googleapis.com/css?family=Vidaloka");
+@import url("https://fonts.googleapis.com/css?family=Paytone+One");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display+SC:900");
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+@import url("https://fonts.googleapis.com/css?family=Vidaloka");
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface&subset=latin-ext");
 .hamburger--collapse .hamburger-inner {
   top: auto;
   bottom: 0;
@@ -41,7 +49,7 @@
   border: 0;
   margin: 0;
   overflow: visible; }
-  @media (max-width: 576px) {
+  @media (max-width: 992px) {
     .hamburger {
       display: inline-block; } }
   .hamburger:hover {
@@ -209,9 +217,9 @@ body, html {
 
 .main {
   padding-top: 45px; }
-  @media (max-width: 576px) {
+  @media (max-width: 992px) {
     .main {
-      padding-top: 0px; } }
+      padding-top: 45px; } }
 
 .nav .row,
 .nav__list {
@@ -219,40 +227,44 @@ body, html {
 
 .nav {
   box-shadow: 0px 14px 72px 1px rgba(0, 0, 0, 0.65);
-  background-color: rgba(53, 53, 53, 0.95); }
-  @media (max-width: 576px) {
+  background-color: rgba(53, 53, 53, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+  @media (max-width: 992px) {
     .nav {
       height: 45px;
       padding: 0; } }
-  @media (max-width: 576px) {
+  @media (max-width: 992px) {
     .nav__list {
       box-shadow: 0px 14px 72px 1px rgba(0, 0, 0, 0.65);
       background-color: rgba(53, 53, 53, 0.95);
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 100vw;
       text-align: center;
       position: relative;
       top: -5px;
       border-top: 1px solid rgba(0, 0, 0, 0.2); } }
 
 .nav-link {
-  font-family: Neon2;
-  font-size: 1.5em;
-  color: rgba(255, 255, 255, 0.7) !important;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  font-family: 'Abril Fatface', cursive;
+  font-size: 1.8em;
+  color: rgba(0, 0, 0, 0.4) !important;
   transition: all 0.75s; }
   .nav-link:hover {
-    color: white !important;
-    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 70px;
-    transition: all 0.5s;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     cursor: pointer; }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .collapse:not(.show) {
     display: block;
     opacity: 0;
     transform: translate3d(0, -100%, 0);
     transition: transform 0.25s, opacity 0.15s; } }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .collapse.show {
     opacity: 1;
     transform: translate3d(0, 0, 0);
@@ -272,16 +284,17 @@ body, html {
   backface-visibility: hidden; }
   .object__title {
     box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
-    font-family: "Neon Online", cursive;
     width: 120%;
     font-size: 12em;
     margin-top: 0;
     margin-bottom: 0;
-    animation: neonFlicker 1.5s ease-in-out infinite alternate, Fade-in 2s;
+    color: rgba(0, 0, 0, 0.2);
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing: -0.05em;
     position: relative;
     z-index: 4;
     overflow-y: hidden; }
-    @media (max-width: 576px) {
+    @media (max-width: 992px) {
       .object__title {
         font-size: 4em; } }
   .object__title p {
@@ -291,7 +304,7 @@ body, html {
   .object__container {
     position: relative;
     padding: 40px; }
-    @media (max-width: 576px) {
+    @media (max-width: 992px) {
       .object__container {
         padding: 0; } }
   .object__bg {
@@ -311,7 +324,7 @@ body, html {
     will-change: transform, filter, background-size;
     transition: background-size 5s ease-in-out, filter 5s ease-out;
     animation: Fade-in-05 4s; }
-    @media (max-width: 576px) {
+    @media (max-width: 992px) {
       .object__bg, .object__title-bg {
         background-size: 80%;
         filter: blur(10px) saturate(1.9) brightness(1); } }
@@ -327,12 +340,18 @@ body, html {
     filter: blur(10px) saturate(2) brightness(1.3);
     background-size: 150%;
     transition: background-size 3s ease-out, filter 3s ease-out; }
-    @media (max-width: 576px) {
+    @media (max-width: 992px) {
       .object__container:hover .object__bg,
       .object__container:focus .object__bg,
       .object__container:active .object__bg {
         background-size: 100%;
         filter: blur(50px) saturate(2) brightness(1.2); } }
+  .object__employer {
+    font-family: 'Vidaloka', serif;
+    font-size: 2em; }
+  .object__description, .object__description-list {
+    font-family: 'Poiret One', cursive;
+    font-size: 1.2em; }
   .object__image {
     width: 100%;
     opacity: 1;

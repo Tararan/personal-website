@@ -34,7 +34,7 @@ body, html {
 .main {
   padding-top: 45px;
 
-  @media (max-width: $screen-xs-max) {
-    padding-top: 0px;
+  @media (max-width: $screen-md-max) {
+    padding-top: 45px;
   }
 }
