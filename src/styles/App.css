@@ -320,14 +320,14 @@ body, html {
     background-position: 50%;
     background-size: 120%;
     background-color: #353535;
-    filter: blur(100px) saturate(1.4) brightness(1);
+    filter: blur(10px) saturate(1.4) brightness(1);
     will-change: transform, filter, background-size;
     transition: background-size 5s ease-in-out, filter 5s ease-out;
     animation: Fade-in-05 4s; }
     @media (max-width: 992px) {
       .object__bg, .object__title-bg {
         background-size: 80%;
-        filter: blur(100px) saturate(1.9) brightness(1); } }
+        filter: blur(10px) saturate(1.9) brightness(1); } }
   .object__title-bg {
     top: 0%;
     filter: blur(30px);
@@ -337,7 +337,7 @@ body, html {
   .object__container:hover .object__bg,
   .object__container:focus .object__bg,
   .object__container:active .object__bg {
-    filter: blur(100px) saturate(2) brightness(1.3);
+    filter: blur(10px) saturate(2) brightness(1.3);
     background-size: 150%;
     transition: background-size 3s ease-out, filter 3s ease-out; }
     @media (max-width: 992px) {

@@ -27,8 +27,6 @@ class Nav extends React.Component {
     this.setState({ isActive: !this.state.isActive });
   };
 
-
-
   render() {
     return (
       <nav className="navbar navbar-dark navbar-expand-lg nav fixed-top">
@@ -40,8 +38,8 @@ class Nav extends React.Component {
             <div className="hamburger-inner" />
           </div>
         </a>
-        <div className="container">
-          {/* <div className="row"> */}
+        <div className="container-fluid">
+        
             <div
               className={`collapse navbar-collapse nav__list-container ${this.state.isActive ? "" : "show"}`}
               onClick={this.ToggleMenu}
@@ -62,8 +60,8 @@ class Nav extends React.Component {
                   );
                 })}
               </ul>
-            {/* </div> */}
-          </div>
+            </div>
+          
         </div>
       </nav>
     );

@@ -30,7 +30,7 @@ const Jobs = ({ employer, description, descriptionList, image }) => {
       {/* <Fade> */}
         <div
           className="object__bg"
-          style={{ backgroundImage: `url(${image}&auto=format&fit=crop&w=10&q=1}`}}
+          style={{ backgroundImage: `url(${image}&auto=format&fit=crop&w=8&q=1}`}}
         />
       {/* </Fade> */}
     </section>
