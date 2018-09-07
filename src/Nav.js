@@ -2,10 +2,9 @@ import React from "react";
 import scrollToComponent from "react-scroll-to-component";
 
 const ScrollToElement = e => {
-  console.log(e.target.id);
   const ScrollHere = document.getElementById("section-" + e.target.id);
   scrollToComponent(ScrollHere, {
-    offset: -50,
+    offset: -40,
     align: "top",
     ease: "outExpo",
     // ease:'inOutCube',
@@ -49,7 +48,7 @@ class Nav extends React.Component {
           id="nav__menu"
         >
           <div className="container">
-            <div class="row">
+            <div className="row">
               <ul className="navbar-nav nav__list d-flex justify-content-between">
                 {this.props.listItem.map(item => {
                   return (
