@@ -31,37 +31,44 @@ class Nav extends React.Component {
     return (
       <nav className="navbar navbar-dark navbar-expand-lg nav fixed-top">
         <a
-          className={`hamburger hamburger--collapse js-hamburger ${this.state.isActive ? "" : "is-active"}`}
+          className={`hamburger hamburger--collapse js-hamburger ${
+            this.state.isActive ? "" : "is-active"
+          }`}
           onClick={this.ToggleHamburger}
         >
           <div className="hamburger-box">
             <div className="hamburger-inner" />
           </div>
         </a>
-        <div className="container-fluid">
-        
-            <div
-              className={`collapse navbar-collapse nav__list-container ${this.state.isActive ? "" : "show"}`}
-              onClick={this.ToggleMenu}
-              id="nav-menu"
-            >
+
+        <div
+          className={`collapse navbar-collapse nav__list-container ${
+            this.state.isActive ? "" : "show"
+          }`}
+          onClick={this.ToggleMenu}
+          id="nav__menu"
+        >
+          <div className="container">
+            <div class="row">
               <ul className="navbar-nav nav__list d-flex justify-content-between">
                 {this.props.listItem.map(item => {
                   return (
-                    <li key={`Nav ${item}`} className="nav-item">
-                      <a
+                    <li key={`Nav ${item}`} className="nav__item ">
+                    <a
                         onClick={ScrollToElement}
                         id={`${item.replace(/\s/g, "")}`}
-                        className="nav-link"
+                        className="nav__item-link"
                       >
                         {item}
                       </a>
+                      <span className="nav__item-link nav__item-link--red" >{item}</span>
+                      <span className="nav__item-link nav__item-link--blue" >{item}</span>
                     </li>
                   );
                 })}
               </ul>
             </div>
-          
+          </div>
         </div>
       </nav>
     );

@@ -20,7 +20,7 @@
     margin-top: 0;
     margin-bottom: 0;
     color: $black-02;
-    font-family: 'Abril Fatface', cursive;
+    font-family: "Abril Fatface", cursive;
     letter-spacing: -0.05em;
     position: relative;
     z-index: 4;
@@ -31,7 +31,7 @@
     }
   }
 
-  &__title p { 
+  &__title p {
     background-color: $anthracit-75;
     margin-bottom: 0;
     z-index: 3;
@@ -39,10 +39,10 @@
 
   &__container {
     position: relative;
-    padding: 40px;
+    padding: 40px 40px 60px;
 
     @media (max-width: $screen-md-max) {
-      padding: 0;
+      padding: 0 0 40px;
     }
   }
 
@@ -50,12 +50,13 @@
     border-bottom: 20px solid $anthracit-75;
   }
 
-  &__bg, &__title-bg  {
+  &__bg,
+  &__title-bg {
     position: absolute;
     display: block;
     z-index: 1;
     top: 0;
-    left: -20vw;
+    left: -10vw;
     width: 120vw;
     height: 100%;
 
@@ -66,16 +67,18 @@
 
     will-change: transform, filter, background-size;
 
-    @media (max-width: $screen-md-max) {
-      background-size: 80%;
-      filter: blur(10px) saturate(1.9) brightness(1);
-    }
-
     transition: background-size 5s ease-in-out, filter 5s ease-out;
     animation: Fade-in-05 4s;
+
+    @media (max-width: $screen-md-max) {
+      background-size: 150%;
+      height: 110%;
+      top: -5%;
+      filter: blur(10px) saturate(1.9) brightness(1);
+    }
   }
 
-  &__title-bg  {
+  &__title-bg {
     top: 0%;
     filter: blur(30px);
     height: 100%;
@@ -86,23 +89,24 @@
   &__container:hover &__bg,
   &__container:focus &__bg,
   &__container:active &__bg {
-    filter: blur(10px) saturate(2) brightness(1.3);
+    filter: blur(10px) saturate(2.2) brightness(1.4);
     background-size: 150%;
+    transition: background-size 3s ease-out, filter 3s ease-out;
 
     @media (max-width: $screen-md-max) {
       background-size: 100%;
-      filter: blur(50px) saturate(2) brightness(1.2);
+      filter: blur(10px) saturate(2) brightness(1.2);
     }
-    transition: background-size 3s ease-out, filter 3s ease-out;
   }
 
   &__employer {
-    font-family: 'Vidaloka', serif;
+    font-family: "Vidaloka", serif;
     font-size: 2em;
   }
 
-  &__description, &__description-list {
-    font-family: 'Poiret One', cursive;
+  &__description,
+  &__description-list {
+    font-family: "Poiret One", cursive;
     font-size: 1.2em;
   }
 
@@ -117,6 +121,10 @@
   &__image-container {
     display: flex;
     align-items: center;
+    
     justify-content: center;
+    max-width: 500px;
+    margin: auto;
   }
+
 }

@@ -1,5 +1,6 @@
 .nav .row,
-.nav__list {
+.nav__list,
+.navbar-nav {
   min-width: 100%;
 }
 
@@ -27,39 +28,77 @@
       border-top: 1px solid $black-02;
     }
   }
-}
 
-.nav-link {
-  font-family: 'Abril Fatface', cursive;
-  font-size: 1.8em;
-  // color: rgba(255, 255, 255, 0.7) !important;
-  color: $black !important;
-  // text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
-  transition: all 0.75s;
+  &__list-container .container {
+    max-width: 1140px;
+  }
 
-&:hover {
-  background: -webkit-linear-gradient(#eee, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  cursor: pointer;
-}
+  &__item {
+    position: relative;
+  }
+
+  &__item-link {
+    font-family: "Abril Fatface", cursive;
+    font-size: 1.8em;
+    display: block;
+    color: $black-04 !important;
+    transition: color 0.7s 0.15s;
+
+    &:hover {
+      cursor: pointer;
+      color: $black-07 !important;
+      transition: color 0.25s;
+    }
+
+    &:hover ~ &--red {
+      opacity: 0.3;
+      transform: translateX(-20px);
+      // transform: translateX(-4px);
+      transition: opacity 0.25s ease-in, transform 0.65s ease-out 0.35s;
+    }
+
+    &:hover ~ &--blue {
+      opacity: 0.3;
+      transform: translateX(20px);
+      // transform: translateX(4px);
+      transition: opacity 0.25s ease-in, transform 0.65s ease-out 0.35s;
+    }
+  }
+
+  &__item-link--red,
+  &__item-link--blue {
+    position: absolute;
+    transform: translateX(0);
+    opacity: 0;
+    z-index: -1;
+    top: 0;
+    transition: opacity 0.25s ease-in 0.35s, transform 0.25s ease-out;
+  }
+
+  &__item-link--red {
+    color: red !important;
+    left: -1px;
+  }
+
+  &__item-link--blue {
+    color: blue !important;
+    right: -1px;
+  }
 }
 
 .collapse:not(.show) {
-
   @media (max-width: $screen-md-max) {
-  display: block;
-  opacity: 0;
-  transform: translate3d(0, -100%, 0);
-  transition: transform 0.25s, opacity 0.15s;
+    display: block;
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+    transition: transform 0.25s, opacity 0.15s;
   }
 }
 
 .collapse.show {
-
   @media (max-width: $screen-md-max) {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-    transition: transform 0.25s, opacity 0.15s; 
+    transition: transform 0.25s, opacity 0.15s;
   }
 }

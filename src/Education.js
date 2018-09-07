@@ -10,7 +10,7 @@ const Education = ({ employer, description, descriptionList, image }) => {
         <Fade>
           <div className="object">
             <div className="row">
-              <div className="col-sm-8">
+              <div className="col-xl-8 col-md-12">
                 <h3 className="object__employer">{employer}</h3>
                 <div className="object__description">{description}</div>
                 <ul className="object__description-list">
@@ -19,7 +19,7 @@ const Education = ({ employer, description, descriptionList, image }) => {
                   ))}
                 </ul>
               </div>
-              <div className="col-sm-4">
+              <div className="col-xl-4 col-md-12">
                 <div className="object__image-container">
                 <img className="object__image" src={`${image}&auto=format&fit=crop&w=500&q=1`} alt="logo" />
                 </div>

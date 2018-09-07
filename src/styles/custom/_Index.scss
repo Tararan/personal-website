@@ -3,31 +3,11 @@ body {
   background-color: $anthracit-75;
   overflow: hidden;
   height: 100%;
-  // width: 100%;
   margin: 0;
-/* 
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    width: 100%;
-    height: calc(120%);
-    background: linear-gradient(
-        217deg,
-        rgba(255, 0, 0, 0.5),
-        rgba(255, 0, 0, 0) 70.71%
-      ),
-      linear-gradient(127deg, rgba(0, 255, 0, 0.5), rgba(0, 255, 0, 0) 70.71%),
-      linear-gradient(336deg, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0) 70.71%);
-
-    animation: Hue-rotate 15s infinite alternate;
-  } */
 }
 
-body, html {
+body,
+html {
   overflow-x: hidden;
 }
 
