@@ -60,8 +60,7 @@ class Nav extends React.Component {
                       >
                         {item}
                       </a>
-                      <span className="nav__item-link nav__item-link--red" >{item}</span>
-                      <span className="nav__item-link nav__item-link--blue" >{item}</span>
+                      <span className="nav__item-link nav__item-link--effekt" >{item}</span>
                     </li>
                   );
                 })}

@@ -49,38 +49,16 @@
       color: $black-07 !important;
       transition: color 0.25s;
     }
-
-    &:hover ~ &--red {
-      opacity: 0.3;
-      transform: translateX(-20px);
-      transition: opacity 0.25s ease-in, transform 0.65s ease-out 0.35s;
+    
+    &--effekt {
+      position: absolute;
+      color: white !important;
+      z-index: 4;
+      top: 0px;
+      overflow: hidden;
+      width: 100px;
+      white-space: nowrap;
     }
-
-    &:hover ~ &--blue {
-      opacity: 0.3;
-      transform: translateX(20px);
-      transition: opacity 0.25s ease-in, transform 0.65s ease-out 0.35s;
-    }
-  }
-
-  &__item-link--red,
-  &__item-link--blue {
-    position: absolute;
-    transform: translateX(0);
-    opacity: 0;
-    z-index: -1;
-    top: 0;
-    transition: opacity 0.25s ease-in 0.35s, transform 0.25s ease-out 0.15s;
-  }
-
-  &__item-link--red {
-    color: red !important;
-    left: -1px;
-  }
-
-  &__item-link--blue {
-    color: blue !important;
-    right: -1px;
   }
 }
 

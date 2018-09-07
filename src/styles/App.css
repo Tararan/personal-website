@@ -241,27 +241,14 @@ html {
       cursor: pointer;
       color: rgba(0, 0, 0, 0.7) !important;
       transition: color 0.25s; }
-    .nav__item-link:hover ~ .nav__item-link--red {
-      opacity: 0.3;
-      transform: translateX(-20px);
-      transition: opacity 0.25s ease-in, transform 0.65s ease-out 0.35s; }
-    .nav__item-link:hover ~ .nav__item-link--blue {
-      opacity: 0.3;
-      transform: translateX(20px);
-      transition: opacity 0.25s ease-in, transform 0.65s ease-out 0.35s; }
-  .nav__item-link--red, .nav__item-link--blue {
-    position: absolute;
-    transform: translateX(0);
-    opacity: 0;
-    z-index: -1;
-    top: 0;
-    transition: opacity 0.25s ease-in 0.35s, transform 0.25s ease-out 0.15s; }
-  .nav__item-link--red {
-    color: red !important;
-    left: -1px; }
-  .nav__item-link--blue {
-    color: blue !important;
-    right: -1px; }
+    .nav__item-link--effekt {
+      position: absolute;
+      color: white !important;
+      z-index: 4;
+      top: 0px;
+      overflow: hidden;
+      width: 100px;
+      white-space: nowrap; }
 
 @media (max-width: 991px) {
   .collapse:not(.show) {
