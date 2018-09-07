@@ -14,7 +14,9 @@ export const jobsListContent = [
             'Deep space is my dwelling place' , 
             'And death is my destination.'
         ],
-        image: 'https://images.unsplash.com/photo-1518727748038-0fc80a6523e9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=84eb4eeda063ad6049cf4d76bc51f2b0'
+        image: 'https://images.unsplash.com/photo-1529765096899-5c3c546419ec?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f3eb1f839128292ab14320430365b802'
+        // image: 'https://images.unsplash.com/photo-1536259221963-08d0283a1f6e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d7987e7226e7ac920242867cfa783eef'
+        // image: 'https://images.unsplash.com/photo-1518727748038-0fc80a6523e9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=84eb4eeda063ad6049cf4d76bc51f2b0'
     },
     {
         id: 2,
@@ -51,6 +53,7 @@ export const jobsListContent = [
         Nam pretium nibh sed lectus suscipit, vel pulvinar lectus malesuada. 
         `,
         descriptionList: [],
-        image: 'https://images.unsplash.com/photo-1508873881324-c92a3fc536ba?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4dd64b8d9512bfc407a50e74baab0e48'
+        image: 'https://images.unsplash.com/photo-1521058001910-55b77aba2203?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=16e03fd1b22a1e9b694c0d2c3457b57a'
+        // image: 'https://images.unsplash.com/photo-1508873881324-c92a3fc536ba?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4dd64b8d9512bfc407a50e74baab0e48'
     },
 ]
