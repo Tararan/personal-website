@@ -12,7 +12,6 @@ const JobsList = ({ jobsListContent, navListContent }) => {
         return (
           <div key={`Jobs ${i}`}>
             <Jobs
-              id={user.id}
               employer={user.employer}
               description={user.description}
               descriptionList={user.descriptionList}

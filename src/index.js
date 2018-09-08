@@ -14,7 +14,8 @@ import { jobsListContent } from './jobsListContent';
 import EducationList from './EducationList';
 import { educationListContent } from './educationListContent';
 
-import Social from './Social';
+import SocialList from './SocialList';
+import { socialListContent } from "./socialListContent";
 
 ReactDOM.render(
     <div>
@@ -23,6 +24,6 @@ ReactDOM.render(
             <JobsList jobsListContent={jobsListContent} navListContent={navListContent} />
             <EducationList educationListContent={educationListContent} navListContent={navListContent} />
         </main>
-        <Social />
+        <SocialList socialListContent={socialListContent} />
     </div>
     , document.getElementById('root'));
