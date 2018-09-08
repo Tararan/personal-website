@@ -8,7 +8,7 @@ const ScrollToElement = e => {
     align: "top",
     ease: "outExpo",
     // ease:'inOutCube',
-    duration: 1000
+    duration: 1400
   });
 };
 
@@ -52,7 +52,7 @@ class Nav extends React.Component {
               <ul className="navbar-nav nav__list d-flex justify-content-between">
                 {this.props.listItem.map(item => {
                   return (
-                    <li key={`Nav ${item}`} className="nav__item ">
+                    <li key={`Nav ${item}`} onClick={ScrollToElement}className="nav__item ">
                     <a
                         onClick={ScrollToElement}
                         id={`${item.replace(/\s/g, "")}`}

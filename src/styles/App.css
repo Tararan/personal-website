@@ -202,13 +202,23 @@ html {
     .main {
       padding-top: 45px; } }
 
+/* 
+ImgDomain
+http://res.cloudinary.com/dmqwm8tlw/image/upload/
+
+Resize
+c_scale,q_10,w_10/
+
+Img
+IvoJurisic.com-Redesign/emakina_01.jpg
+ */
 .nav .row,
 .nav__list,
 .navbar-nav {
   min-width: 100%; }
 
 .nav {
-  box-shadow: 0px 14px 72px 1px rgba(0, 0, 0, 0.65);
+  box-shadow: 0px 4px 20px 1px rgba(0, 0, 0, 0.65);
   background-color: rgba(53, 53, 53, 0.95);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
   @media (max-width: 991px) {
@@ -217,7 +227,7 @@ html {
       padding: 0; } }
   @media (max-width: 991px) {
     .nav__list {
-      box-shadow: 0px 14px 72px 1px rgba(0, 0, 0, 0.65);
+      box-shadow: 0px 4px 20px 1px rgba(0, 0, 0, 0.65);
       background-color: rgba(53, 53, 53, 0.95);
       left: 0;
       right: 0;
@@ -236,19 +246,25 @@ html {
     font-size: 1.8em;
     display: block;
     color: rgba(0, 0, 0, 0.4) !important;
-    transition: color 0.7s 0.15s; }
+    transition: width 0.25s ease-in-out; }
     .nav__item-link:hover {
       cursor: pointer;
-      color: rgba(0, 0, 0, 0.7) !important;
-      transition: color 0.25s; }
+      transition: width 0.25s ease-in-out; }
     .nav__item-link--effekt {
+      display: block;
+      pointer-events: none;
+      color: #626262 !important;
+      text-shadow: 1px 0 0 #323232, -1px 0 0 #323232, 0 1px 0 #323232, 0 -1px 0 #323232, 1px 1px #323232, -1px -1px 0 #323232, 1px -1px 0 #323232, -1px 1px 0 #323232;
       position: absolute;
-      color: white !important;
       z-index: 4;
       top: 0px;
       overflow: hidden;
-      width: 100px;
-      white-space: nowrap; }
+      width: 0%;
+      white-space: nowrap;
+      transition: width 0.45s 0.2s; }
+    .nav__item-link:hover ~ .nav__item-link--effekt, .nav__item-link--effekt:hover {
+      width: 100%;
+      transition: width 0.45s ease-in; }
 
 @media (max-width: 991px) {
   .collapse:not(.show) {
@@ -270,7 +286,7 @@ html {
   padding: 40px;
   background-color: rgba(53, 53, 53, 0.45);
   border-radius: 20px;
-  box-shadow: 0px 14px 72px 1px rgba(0, 0, 0, 0.65);
+  box-shadow: 0px 4px 20px 1px rgba(0, 0, 0, 0.65);
   color: white;
   display: flex;
   align-items: center;
@@ -352,7 +368,7 @@ html {
     opacity: 1;
     animation: Fade-in 0.5s;
     border-radius: 10px;
-    box-shadow: 0px 14px 72px 1px rgba(0, 0, 0, 0.65); }
+    box-shadow: 0px 4px 20px 1px rgba(0, 0, 0, 0.65); }
   .object__image-container {
     display: flex;
     align-items: center;
@@ -360,14 +376,25 @@ html {
     max-width: 500px;
     margin: auto; }
 
-/* .main {
-    transform: translateY(0);
-}
-
-.nav-link.MenuItem1:focus  .main {
-     transform: translateY(0);
-}
-
-.nav-link.MenuItem2:focus ~ .main {
-     transform: translateY(2068px);
-} */
+.Social {
+  background-color: rgba(53, 53, 53, 0.45);
+  box-shadow: 0px 4px 20px 1px rgba(0, 0, 0, 0.65);
+  border-radius: 0 20px 20px  0;
+  width: 80px;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: calc(50% - 100px);
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: center; }
+  .Social__icons {
+    width: 60px;
+    display: block;
+    margin: 10px; }
+  .Social__icons img {
+    width: 100%;
+    filter: saturate(0.9); }
+    .Social__icons img:hover {
+      filter: saturate(2.2); }

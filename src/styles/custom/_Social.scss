@@ -1,0 +1,31 @@
+.Social {
+    background-color: $anthracit-45;
+    box-shadow: $strong-shadow;
+    border-radius: 0 20px 20px  0;
+    width: 80px;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: calc(50% - 100px);
+
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
+
+    &__icons {
+        width: 60px;
+        display: block;
+        margin: 10px;
+    }
+
+
+    &__icons img {
+        width: 100%;
+        filter: saturate(0.9);
+        
+        &:hover {
+            filter: saturate(2.2);
+        }
+    }
+}

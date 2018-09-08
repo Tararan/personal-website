@@ -1,6 +1,5 @@
 export const jobsListContent = [
     {
-        id: 1,
         employer: 'Stars, My Destination',
         description: `
         Gulliver Foyle: Last remaining survivor of a merchant spaceship, the Nomad. Captured by the "Scientific People" on an asteroid, he is tattooed on his face according to their customs. The tattoos are later removed, but the scars left under his skin become visible when his emotions get out of control.
@@ -14,46 +13,12 @@ export const jobsListContent = [
             'Deep space is my dwelling place' , 
             'And death is my destination.'
         ],
-        image: 'https://images.unsplash.com/photo-1529765096899-5c3c546419ec?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f3eb1f839128292ab14320430365b802'
+        imgDomain: 'http://res.cloudinary.com/dmqwm8tlw/image/upload/',
+        image: `
+        IvoJurisic.com-Redesign/emakina_01.jpg
+        `
+        // image: 'https://images.unsplash.com/photo-1529765096899-5c3c546419ec?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f3eb1f839128292ab14320430365b802'
         // image: 'https://images.unsplash.com/photo-1536259221963-08d0283a1f6e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d7987e7226e7ac920242867cfa783eef'
         // image: 'https://images.unsplash.com/photo-1518727748038-0fc80a6523e9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=84eb4eeda063ad6049cf4d76bc51f2b0'
-    },
-    {
-        id: 2,
-        employer: 'Lorem Ipsumus Maximus',
-        description: `
-        Suspendisse nec arcu at turpis hendrerit 
-        faucibus et vitae ante. Etiam at pretium massa. 
-        Nulla eget quam et elit euismod placerat sit amet ac quam. 
-        Integer congue pulvinar ligula ut laoreet. 
-        Donec urna tellus, rhoncus at metus eu, venenatis lacinia ante. 
-        Curabitur nec condimentum turpis. Nunc posuere egestas rhoncus. 
-        Integer hendrerit purus eros, ac suscipit odio congue id. 
-        Nam pretium nibh sed lectus suscipit, vel pulvinar lectus malesuada. 
-        `,
-        descriptionList: [
-            'First' , 
-            'Second' , 
-            'Third' , 
-        ],
-        image: 'https://images.unsplash.com/photo-1535709418-6f14c8e87bb6?ixlib=rb-0.3.5&s=5ae3f410af393fa203731b5712d5ecc0'
-    },
-    
-    {
-        id: 3,
-        employer: 'Lorem Prasitus Maximus',
-        description: `
-        Suspendisse nec arcu at turpis hendrerit 
-        faucibus et vitae ante. Etiam at pretium massa. 
-        Nulla eget quam et elit euismod placerat sit amet ac quam. 
-        Integer congue pulvinar ligula ut laoreet. 
-        Donec urna tellus, rhoncus at metus eu, venenatis lacinia ante. 
-        Curabitur nec condimentum turpis. Nunc posuere egestas rhoncus. 
-        Integer hendrerit purus eros, ac suscipit odio congue id. 
-        Nam pretium nibh sed lectus suscipit, vel pulvinar lectus malesuada. 
-        `,
-        descriptionList: [],
-        image: 'https://images.unsplash.com/photo-1521058001910-55b77aba2203?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=16e03fd1b22a1e9b694c0d2c3457b57a'
-        // image: 'https://images.unsplash.com/photo-1508873881324-c92a3fc536ba?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4dd64b8d9512bfc407a50e74baab0e48'
-    },
+    }
 ]

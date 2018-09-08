@@ -1,3 +1,14 @@
+/* 
+ImgDomain
+http://res.cloudinary.com/dmqwm8tlw/image/upload/
+
+Resize
+c_scale,q_10,w_10/
+
+Img
+IvoJurisic.com-Redesign/emakina_01.jpg
+ */
+
 .nav .row,
 .nav__list,
 .navbar-nav {
@@ -42,22 +53,41 @@
     font-size: 1.8em;
     display: block;
     color: $black-04 !important;
-    transition: color 0.7s 0.15s;
+    transition: width 0.25s ease-in-out;
 
     &:hover {
       cursor: pointer;
-      color: $black-07 !important;
-      transition: color 0.25s;
+      // color: white !important;
+      transition: width 0.25s ease-in-out;
     }
-    
+
     &--effekt {
+      display: block;
+      pointer-events: none;
+      color: $neutral-grey !important;
+      text-shadow: 
+      1px 0 0 $nav-text-border, 
+      -1px 0 0 $nav-text-border, 
+      0 1px 0 $nav-text-border, 
+      0 -1px 0 $nav-text-border,
+      1px 1px $nav-text-border, 
+      -1px -1px 0 $nav-text-border, 
+      1px -1px 0 $nav-text-border, 
+      -1px 1px 0 $nav-text-border;
       position: absolute;
-      color: white !important;
       z-index: 4;
       top: 0px;
       overflow: hidden;
-      width: 100px;
+      width: 0%;
       white-space: nowrap;
+
+      transition: width 0.45s 0.2s;
+    }
+
+    &:hover ~ &--effekt,
+    &--effekt:hover {
+      width: 100%;
+      transition: width 0.45s ease-in;
     }
   }
 }
