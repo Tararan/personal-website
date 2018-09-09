@@ -1,24 +1,121 @@
 export const jobsListContent = [
     {
-        employer: 'Stars, My Destination',
-        description: `
-        Gulliver Foyle: Last remaining survivor of a merchant spaceship, the Nomad. Captured by the "Scientific People" on an asteroid, he is tattooed on his face according to their customs. The tattoos are later removed, but the scars left under his skin become visible when his emotions get out of control.
-        The Presteign: Head of the wealthy Presteign clan, whose interests include a chain of luxury department stores, each managed by an identical "Mr. Presto". Wealthy people like Presteign demonstrate their status by using outmoded methods of transportation and never jaunting if they can avoid it. Presteign holds court in his Star Chamber, an elaborate old-fashioned office equipped with a bar, and staffed by robots. It is designed to disorient visitors and give him the psychological edge.
-        Robin Wednesbury: A Telesend, a one-way telepath who can send thoughts but not receive them. Foyle meets her in "jaunte rehab" while pretending to be someone who has lost the ability to jaunte. She discovers his deception but he kidnaps her and rapes her to intimidate her into silence. Later, as Fourmyle, he recruits her to help him navigate the upper echelons of society. After she discovers who he really is, he offers her the prospect of finding her family, who were refugees on the Vorga.
-        Jisbella ("Jiz") McQueen: Serving five years of "cure" in Gouffre Martel for larceny.
+        employer: 'Emakina // Frontend Developer',
+        description: [
+            `
+            February 2018-Present
         `,
+            `
+        Translating designs and mockups into responsive websites using semantic HTML5, 
+        CSS3 and JavaScript with accompanying frameworks.
+        Developing frontend for clients using modern frameworks and tools listed below. 
+        Implementing sliced designs in Kentico CMS.
+        `,
+            `
+        To deliver given tasks I utlized following technologies, libraries, tools and frameworks:
+        `
+        ],
         descriptionList: [
-            'Gully Foyle is my name' , 
-            'And Terra is my nation' , 
-            'Deep space is my dwelling place' , 
-            'And death is my destination.'
+            `
+        HTML5
+        `,
+            `
+        CSS3 (used always with SASS extension)
+        `,
+            `
+        Javascript (always used with jQuery, unless I am working with React)
+        `,
+            `
+        Bootstrap v3 and v4
+        `,
+            `
+        ReactJS
+        `,
+            `
+        Git
+        `,
+            `
+        NodeJS
+        `,
+            `
+        NPM
+        `
         ],
         imgDomain: 'http://res.cloudinary.com/dmqwm8tlw/image/upload/',
         image: `
         IvoJurisic.com-Redesign/emakina_01.jpg
         `
-        // image: 'https://images.unsplash.com/photo-1529765096899-5c3c546419ec?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f3eb1f839128292ab14320430365b802'
-        // image: 'https://images.unsplash.com/photo-1536259221963-08d0283a1f6e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d7987e7226e7ac920242867cfa783eef'
-        // image: 'https://images.unsplash.com/photo-1518727748038-0fc80a6523e9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=84eb4eeda063ad6049cf4d76bc51f2b0'
-    }
+    },
+    {
+        employer: 'Meritus Plus // Mentor ',
+        description: [
+            `
+            December 2015-January 2017 // Mentor
+        `,
+            `
+        Overseeing two different sales teams, communicating directly 
+        with clients regarding accomplished goals and the future of projects. 
+        Creating spreadsheets for sales teams to track sales and cancellations to minimize potential losses.
+        Coaching agents daily one on one on how to minimize "Buyers remorse" and increase sales conversions.
+        `,
+        `
+        July 2015-December 2015 // Sales Agent
+        `,
+        `
+        Cold calling potential clients and selling a variety of services regarding telecommunication.
+        As a sales agent I have worked on acquisition of customers, retaining current customers and upselling current customers.
+        `
+        ],
+        descriptionList: [],
+        imgDomain: 'http://res.cloudinary.com/dmqwm8tlw/image/upload/',
+        image: `
+    IvoJurisic.com-Redesign/meritus-vrata-2.jpg
+    `,
+    },    
+    {
+        employer: 'Datastream // Mechatronician ',
+        description: [
+            `
+            July 2014
+        `,
+            `
+            Setting up routers and firewall on ATP Umag Tournament to enable. 
+            Organizing cable management before the tournament to enable internet access.
+        `
+        ],
+        descriptionList: [],
+        imgDomain: 'http://res.cloudinary.com/dmqwm8tlw/image/upload/',
+        image: `
+        IvoJurisic.com-Redesign/datastream.png
+    `,
+    },
+    {
+        employer: 'Restaurant Brüers // Restaurant Specialist ',
+        description: [
+            `
+            October 2014-March 2015
+        `,
+            `
+            Working as a restarurant specialist which includes preparing restaurant and night club for big festivities,
+            receiving and serving orders.
+        `,
+        `
+        Attending german school for Restaurant Fachman, learning about german cuisine and language.
+        `
+        ],
+        descriptionList: [],
+        imgDomain: 'http://res.cloudinary.com/dmqwm8tlw/image/upload/',
+        image: `
+        IvoJurisic.com-Redesign/vk201111_KUN8227-b70180ee.jpg
+    `,
+    }    
 ]
+
+
+/* 
+
+http://res.cloudinary.com/dmqwm8tlw/image/upload/
+IvoJurisic.com-Redesign/vk201111_KUN8227-b70180ee.jpg
+
+
+ */

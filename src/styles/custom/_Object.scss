@@ -4,8 +4,10 @@
   margin: 40px 0;
   padding: 40px;
 
-  background-color: $anthracit-45;
+  background-color: $anthracit-65;
   border-radius: 20px;
+  border: 1px solid $white-glass;
+
   box-shadow: $strong-shadow;
   color: white;
   display: flex;
@@ -15,8 +17,9 @@
 
   &__title {
     box-shadow: $stronger-shadow;
-    width: 120%;
-    font-size: 12em;
+    // width: 120%;
+    // font-size: 12em;
+    font-size: 10.5vw;
     margin-top: 0;
     margin-bottom: 0;
     color: $black-02;
@@ -35,6 +38,7 @@
     background-color: $anthracit-75;
     margin-bottom: 0;
     z-index: 3;
+    padding-bottom: 25px;
   }
 
   &__container {
@@ -63,7 +67,7 @@
     background-position: 50%;
     background-size: 120%;
     background-color: $anthracit;
-    filter: blur(10px) saturate(1.4) brightness(1);
+    filter: blur(40px) saturate(1.2) brightness(1);
 
     will-change: transform, filter, background-size;
 
@@ -74,7 +78,7 @@
       background-size: 150%;
       height: 110%;
       top: -5%;
-      filter: blur(10px) saturate(1.9) brightness(1);
+      filter: blur(10px) saturate(1.4) brightness(1);
     }
   }
 
@@ -89,13 +93,13 @@
   &__container:hover &__bg,
   &__container:focus &__bg,
   &__container:active &__bg {
-    filter: blur(10px) saturate(2.2) brightness(1.4);
+    filter: blur(40px) saturate(1.4) brightness(1.4);
     background-size: 150%;
     transition: background-size 3s ease-out, filter 3s ease-out;
 
     @media (max-width: $screen-md-max) {
       background-size: 100%;
-      filter: blur(10px) saturate(2) brightness(1.2);
+      filter: blur(40px) saturate(1.4) brightness(1.2);
     }
   }
 
