@@ -36,8 +36,9 @@
 .hamburger {
   position: relative;
   z-index: 2000;
-  padding: 10px 10px;
+  padding: 12px 15px;
   display: none;
+  top: 6px;
   cursor: pointer;
   transition-property: opacity, filter;
   transition-duration: 0.15s;
@@ -200,7 +201,7 @@ html {
   padding-top: 45px; }
   @media (max-width: 991px) {
     .main {
-      padding-top: 45px; } }
+      padding-top: 55px; } }
 
 /* 
 ImgDomain
@@ -223,7 +224,7 @@ IvoJurisic.com-Redesign/emakina_01.jpg
   border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
   @media (max-width: 991px) {
     .nav {
-      height: 45px;
+      height: 60px;
       padding: 0; } }
   @media (max-width: 991px) {
     .nav__list {
@@ -235,8 +236,9 @@ IvoJurisic.com-Redesign/emakina_01.jpg
       width: 100vw;
       text-align: center;
       position: relative;
-      top: -5px;
-      border-top: 1px solid rgba(0, 0, 0, 0.2); } }
+      top: 2px;
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      z-index: 10; } }
   .nav__list-container .container {
     max-width: 1140px; }
   .nav__item {
@@ -262,9 +264,15 @@ IvoJurisic.com-Redesign/emakina_01.jpg
       width: 0%;
       white-space: nowrap;
       transition: width 0.45s 0.2s; }
+      @media (max-width: 991px) {
+        .nav__item-link--effekt {
+          display: none; } }
     .nav__item-link:hover ~ .nav__item-link--effekt, .nav__item-link--effekt:hover {
       width: 100%;
       transition: width 0.45s ease-in; }
+    @media (max-width: 991px) {
+      .nav__item-link {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); } }
 
 @media (max-width: 991px) {
   .collapse:not(.show) {
@@ -382,14 +390,25 @@ IvoJurisic.com-Redesign/emakina_01.jpg
   border-radius: 0 20px 20px  0;
   width: 80px;
   position: fixed;
-  z-index: 1000;
+  z-index: 2000;
   left: 0;
   top: calc(50% - 100px);
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
   align-items: center; }
+  @media (max-width: 991px) {
+    .Social {
+      box-shadow: none;
+      background-color: transparent;
+      width: calc(100% - 60px);
+      top: 0;
+      right: 0;
+      left: auto;
+      flex-flow: row nowrap;
+      justify-content: flex-end; } }
   .Social__icons {
+    width: 80px;
     display: block;
     position: relative;
     margin: 5px 0; }
@@ -404,12 +423,28 @@ IvoJurisic.com-Redesign/emakina_01.jpg
       width: 0;
       height: 26px;
       transition: width 0.45s 0.2s; }
+      @media (max-width: 991px) {
+        .Social__icons:after {
+          top: calc(50% - 10px);
+          left: calc(50% - 8px);
+          width: 20px;
+          height: 19px; } }
     .Social__icons:hover:after {
       width: 27px;
       transition: width 0.45s; }
+      @media (max-width: 991px) {
+        .Social__icons:hover:after {
+          width: 0; } }
+    @media (max-width: 991px) {
+      .Social__icons {
+        width: 65px;
+        margin: 0; } }
   .Social__icons-img {
-    width: 80px;
+    width: 100%;
     padding: 10px; }
+    @media (max-width: 991px) {
+      .Social__icons-img {
+        padding: 5px 10px; } }
   .Social__icons-img--hover {
     filter: saturate(1.2); }
   .Social__icons-img--blurred {

@@ -4,7 +4,7 @@
     border-radius: 0 20px 20px  0;
     width: 80px;
     position: fixed;
-    z-index: 1000;
+    z-index: 2000;
     left: 0;
     top: calc(50% - 100px);
 
@@ -13,7 +13,20 @@
     flex-flow: row wrap;
     align-items: center;
 
+    @media (max-width: $screen-md-max) {
+        box-shadow: none;
+        background-color: transparent;
+
+        width: calc(100% - 60px);
+        top: 0;
+        right: 0;
+        left: auto;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+    }    
+
     &__icons {
+        width: 80px;
         display: block;
         position: relative;
         margin: 5px 0;
@@ -30,6 +43,13 @@
             height: 26px;
 
             transition: width 0.45s 0.2s;
+
+            @media (max-width: $screen-md-max) {
+                top: calc(50% - 10px);
+                left: calc(50% - 8px);
+                width: 20px;
+                height: 19px;
+            }
         }
 
         &:hover {
@@ -37,13 +57,26 @@
                 width: 27px;
 
                 transition: width 0.45s;
+
+                @media (max-width: $screen-md-max) {
+                    width: 0;
+                }
             }
+        }
+
+        @media (max-width: $screen-md-max) {
+            width: 65px;
+            margin: 0;
         }
     }
 
     &__icons-img {
-        width: 80px;
+        width: 100%;
         padding: 10px;
+
+        @media (max-width: $screen-md-max) {
+            padding: 5px 10px;
+        }
     }
 
     &__icons-img--hover {

@@ -4,7 +4,7 @@ import scrollToComponent from "react-scroll-to-component";
 const ScrollToElement = e => {
   const ScrollHere = document.getElementById("section-" + e.target.id);
   scrollToComponent(ScrollHere, {
-    offset: -40,
+    offset: -55,
     align: "top",
     ease: "outExpo",
     // ease:'inOutCube',

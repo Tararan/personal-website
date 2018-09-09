@@ -21,7 +21,7 @@ IvoJurisic.com-Redesign/emakina_01.jpg
   border-bottom: 1px solid $white-glass;
 
   @media (max-width: $screen-md-max) {
-    height: 45px;
+    height: 60px;
     padding: 0;
   }
 
@@ -35,8 +35,9 @@ IvoJurisic.com-Redesign/emakina_01.jpg
       width: 100vw;
       text-align: center;
       position: relative;
-      top: -5px;
+      top: 2px;
       border-top: 1px solid $black-02;
+      z-index: 10;
     }
   }
 
@@ -57,7 +58,6 @@ IvoJurisic.com-Redesign/emakina_01.jpg
 
     &:hover {
       cursor: pointer;
-      // color: white !important;
       transition: width 0.25s ease-in-out;
     }
 
@@ -82,12 +82,20 @@ IvoJurisic.com-Redesign/emakina_01.jpg
       white-space: nowrap;
 
       transition: width 0.45s 0.2s;
+
+      @media (max-width: $screen-md-max) {
+        display: none;
+      }
     }
 
     &:hover ~ &--effekt,
     &--effekt:hover {
       width: 100%;
       transition: width 0.45s ease-in;
+    }
+  
+    @media (max-width: $screen-md-max) {
+      border-bottom: 1px solid $white-glass;
     }
   }
 }
