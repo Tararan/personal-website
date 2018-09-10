@@ -66,15 +66,25 @@ export const skillsListContent = [
         employer: 'Communication skills',
         description: [
             `
-            I attained great communication skills by working in industries that directly 
+            I attained my communication skills by working in industries that directly 
             deal with people through my college experience and through my life. 
             `,
             `
-            I worked as a bartender in Germany, I volounteered on a couple of conventions (
-            including the biggest Southeastern SF convention, where I became a leader of volounteers in 2018)
+            Short list of examples :
             `
         ],
-        descriptionList: [],
+        descriptionList: [
+            `
+            I worked as a waiter in Restaurant in Oldenburg.
+            `,
+            `
+            I worked as a sales agent for two years. Job I held for  six month before  being promoted to mentor
+            `,
+            `
+            I volounteered at conventions like Istrakon and SFerakon for many years where I 
+            answered visitors inquiries and helped with organization.
+            `
+        ],
         imgDomain: 'http://res.cloudinary.com/dmqwm8tlw/image/upload/',
         image:
             `
@@ -85,11 +95,11 @@ export const skillsListContent = [
         employer: 'Organisational / leadership skills',
         description: [
             `
-             I attained great organizational and leadership skills through my experience 
+             I attained my organizational and leadership skills through my experience 
              as a mentor in Meritus Plus to two teams where I was directly responsible 
              for teams result and customer experience.
              `,
-             `
+            `
              I also got to exercise organisational and leadership skills as a leader of volunteers on SFerakon Convention (which is the biggest science fiction and fantasy convention in 
             SouthEastern Europe)  where I had to manage close to 50 people and distribute them around 
             the convention so it would flow smoothly.

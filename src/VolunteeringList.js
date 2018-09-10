@@ -1,22 +1,21 @@
 import React from 'react';
-import Education from './Education';
+import Volunteering from './Volunteering';
 
-const EducationList = ({ educationListContent, navListContent }) => {
+const VolunteeringList = ({ volunteeringListContent, navListContent }) => {
     return (
         <section className="section" id={`section-${navListContent[0].listItem[1].replace(/\s/g, '')}`}>
             <h2 className="object__title">
                 <p>{navListContent[0].listItem[1]}</p>
-                <div className="object__title-bg" style={{ backgroundImage: `url(${educationListContent[0].image}&auto=format&fit=crop&w=20&q=1})` }} ></div>
+                <div className="object__title-bg" style={{ backgroundImage: `url(${volunteeringListContent[0].image}&auto=format&fit=crop&w=20&q=1})` }} ></div>
             </h2>
-            {
-                educationListContent.map((user, i) => {
+            {volunteeringListContent.map((user, i) => {
                     return (
-                        <div key={`Education ${i}`}>
-                            <Education
-                                id={user.id}
+                        <div key={`Volunteering ${i}`}>
+                            <Volunteering
                                 employer={user.employer}
                                 description={user.description}
                                 descriptionList={user.descriptionList}
+                                imgDomain={user.imgDomain}
                                 image={user.image}
                             />
                         </div>
@@ -27,4 +26,4 @@ const EducationList = ({ educationListContent, navListContent }) => {
     );
 }
 
-export default EducationList;
+export default VolunteeringList;

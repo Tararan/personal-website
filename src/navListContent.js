@@ -1,7 +1,7 @@
 export const navListContent = [
     {
         listItem: [
-            'Experience',
+            'Work experience',
             'Personal skills',
             'Volunteering'
         ]

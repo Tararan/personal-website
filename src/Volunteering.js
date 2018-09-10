@@ -1,8 +1,7 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
-import "./styles/App.scss";
 
-const Education = ({ employer, description, descriptionList, image }) => {
+const Volunteering = ({ employer, description, descriptionList, image }) => {
   return (
     <section className="object__container">
       <div className="container">
@@ -11,10 +10,14 @@ const Education = ({ employer, description, descriptionList, image }) => {
             <div className="row">
               <div className="col-xl-8 col-md-12">
                 <h3 className="object__employer">{employer}</h3>
-                <div className="object__description">{description}</div>
+                <div className="object__description">
+                {description.map((item, i) => (
+                    <p key={`Volunteering ${item}${i}`}>{item}</p>
+                  ))}
+                </div>
                 <ul className="object__description-list">
                   {descriptionList.map((item, i) => (
-                    <li key={`Nav ${item}${i}`}>{item}</li>
+                    <li key={`Volunteering ${item}${i}`}>{item}</li>
                   ))}
                 </ul>
               </div>
@@ -37,4 +40,4 @@ const Education = ({ employer, description, descriptionList, image }) => {
   );
 };
 
-export default Education;
+export default Volunteering;
