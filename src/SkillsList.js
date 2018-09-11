@@ -3,9 +3,9 @@ import Skills from "./Skills";
 
 const SkillsList = ({ skillsListContent, navListContent }) => {
   return (
-    <section className="section" id={`section-${navListContent[0].listItem[1].replace(/\s/g, '')}`}>
+    <section className="section" id={`section-${navListContent[0].listItem[2].replace(/\s/g, '')}`}>
       <h2 className="object__title">
-        <p>{navListContent[0].listItem[1]}</p>
+        <p>{navListContent[0].listItem[2]}</p>
         <div className="object__title-bg" style={{ backgroundImage: `url(${skillsListContent[0].imgDomain}c_scale,q_20,w_10/${skillsListContent[0].image.replace(/\s/g, '')})` }} ></div>
       </h2>
       {skillsListContent.map((user, i) => {
