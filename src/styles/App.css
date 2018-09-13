@@ -209,7 +209,8 @@ html {
 .nav .row,
 .nav__list,
 .navbar-nav {
-  min-width: 100%; }
+  min-width: 100%;
+  width: auto; }
 
 .nav {
   box-shadow: 0px 4px 20px 1px rgba(0, 0, 0, 0.65);
@@ -229,7 +230,7 @@ html {
       width: 100vw;
       text-align: center;
       position: relative;
-      top: 2px;
+      top: 6px;
       border-top: 1px solid rgba(0, 0, 0, 0.2);
       z-index: 10; } }
   .nav__list-container .container {
@@ -338,8 +339,9 @@ html {
     animation: Fade-in-05 4s; }
     @media (max-width: 991px) {
       .object__bg, .object__title-bg {
-        background-size: 150%;
+        background-size: cover;
         height: 110%;
+        background-repeat: none;
         top: -5%;
         filter: blur(10px) saturate(1.4) brightness(1); } }
   .object__title-bg {
@@ -358,7 +360,10 @@ html {
       .object__container:hover .object__bg,
       .object__container:focus .object__bg,
       .object__container:active .object__bg {
-        background-size: 100%;
+        background-size: cover;
+        height: 110%;
+        background-repeat: none;
+        top: -5%;
         filter: blur(40px) saturate(1.4) brightness(1.2); } }
   .object__employer {
     font-family: "Vidaloka", serif;

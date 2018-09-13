@@ -2,6 +2,7 @@
 .nav__list,
 .navbar-nav {
   min-width: 100%;
+  width: auto;
 }
 
 .nav {
@@ -24,7 +25,7 @@
       width: 100vw;
       text-align: center;
       position: relative;
-      top: 2px;
+      top: 6px;
       border-top: 1px solid $black-02;
       z-index: 10;
     }
