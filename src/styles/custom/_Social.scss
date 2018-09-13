@@ -18,6 +18,7 @@
     @media (max-width: $screen-md-max) {
         box-shadow: none;
         background-color: transparent;
+        border: none;
 
         width: calc(100% - 60px);
         top: 0;
